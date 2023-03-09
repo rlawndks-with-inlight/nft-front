@@ -49,14 +49,14 @@ const Header = () => {
                       className="logo-dark"
                       src={logodark}
                       alt="Binasea"
-                      style={{ height: "46px", paddingRight: "8px" }}
+                      style={{ height: "46px" }}
                     />
                     <img
                       id="logo_header"
                       className="logo-light"
                       src={logo}
                       alt="Binasea"
-                      style={{ height: "46px", paddingRight: "8px" }}
+                      style={{ height: "46px"}}
                     />
                   </Link>
                 </div>
