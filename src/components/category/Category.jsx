@@ -25,7 +25,7 @@ function Category(props) {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="tf-heading mb40 wow fadeInUp">
-                                <h4 className="heading">All Categories</h4>
+                                <h4 className="heading">모든 카테고리</h4>
                             </div>
                         </div>
                         <div className="col-md-12 wow fadeInUp">

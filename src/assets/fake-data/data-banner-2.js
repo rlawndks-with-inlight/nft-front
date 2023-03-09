@@ -10,36 +10,36 @@ const dataBanner2 = [
     {
         id: 1,
         
-        heading: 'Defind, Collect and Sell Super Rate NFT ',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.',
+        heading: 'NFT를 수집 및 판매합니다.',
+        desc: 'NOWNFT에서 원하는 NFT를 찾아보세요.',
         img: img1,
     },
     {
         id: 2,
         
-        heading: 'Defind, Collect and Sell Super Rate NFT ',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.',
+        heading: 'NFT를 수집 및 판매합니다.',
+        desc: 'NOWNFT에서 원하는 NFT를 찾아보세요.',
         img: img2,
     },
     {
         id: 3,
         
-        heading: 'Defind, Collect and Sell Super Rate NFT ',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.',
+        heading: 'NFT를 수집 및 판매합니다.',
+        desc: 'NOWNFT에서 원하는 NFT를 찾아보세요.',
         img: img3,
     },
     {
         id: 4,
         
-        heading: 'Defind, Collect and Sell Super Rate NFT ',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.',
+        heading: 'NFT를 수집 및 판매합니다.',
+        desc: 'NOWNFT에서 원하는 NFT를 찾아보세요.',
         img: img4,
     },
     {
         id: 5,
         
-        heading: 'Defind, Collect and Sell Super Rate NFT ',
-        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.',
+        heading: 'NFT를 수집 및 판매합니다.',
+        desc: 'NOWNFT에서 원하는 NFT를 찾아보세요.',
         img: img5,
     },
     

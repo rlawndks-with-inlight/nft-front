@@ -27,73 +27,73 @@ const dataSeller = [
         id: 1,
         avt: avt1,
         price: '1.56 wETH',
-        name: 'Roxanne Wallaker',
+        name:'지은이',
     },
     {
         id: 2,
         avt: avt2,
         price: '1.56 wETH',
-        name: 'Winifred Clem',
+        name:'지은이',
     },
     {
         id: 3,
         avt: avt3,
         price: '1.56 wETH',
-        name: 'Angelica Sherman',
+        name:'지은이',
     },
     {
         id: 4,
         avt: avt4,
         price: '1.56 wETH',
-        name: 'Hayden Yates',
+        name:'지은이',
     },
     {
         id: 5,
         avt: avt5,
         price: '1.56 wETH',
-        name: 'Rowena Tillery',
+        name:'지은이',
     },
     {
         id: 6,
         avt: avt6,
         price: '1.56 wETH',
-        name: 'Roderick Norman',
+        name:'지은이',
     },
     {
         id: 7,
         avt: avt7,
         price: '1.56 wETH',
-        name: 'Virginia Richards',
+        name:'지은이',
     },
     {
         id: 8,
         avt: avt8,
         price: '1.56 wETH',
-        name: 'Barbara Moore',
+        name:'지은이',
     },
     {
         id: 9,
         avt: avt9,
         price: '1.56 wETH',
-        name: 'Virginia Richards',
+        name:'지은이',
     },
     {
         id: 10,
         avt: avt10,
         price: '1.56 wETH',
-        name: 'Colin Fennimore',
+        name:'지은이',
     },
     {
         id: 11,
         avt: avt11,
         price: '1.56 wETH',
-        name: 'Ebenezer Anderson',
+        name:'지은이',
     },
     {
         id: 12,
         avt: avt12,
         price: '1.56 wETH',
-        name: 'Simona Davidson',
+        name:'지은이',
     },
 
 
@@ -101,42 +101,42 @@ const dataSeller = [
         id: 13,
         avt: avt13,
         price: '100 ETH',
-        name: 'Wren Clark',
+        name:'지은이',
         numb: '1'
     },
     {
         id: 14,
         avt: avt14,
         price: '90 ETH',
-        name: 'Madge Dennis',
+        name:'지은이',
         numb: '2'
     },
     {
         id: 15,
         avt: avt15,
         price: '80 ETH',
-        name: 'Alfred Mitchell',
+        name:'지은이',
         numb: '3'
     },
     {
         id: 16,
         avt: avt16,
         price: '70 ETH',
-        name: 'Wren Clark',
+        name:'지은이',
         numb: '4'
     },
     {
         id: 17,
         avt: avt17,
         price: '60 ETH',
-        name: 'Troy Sharp',
+        name:'지은이',
         numb: '5'
     },
     {
         id: 18,
         avt: avt18,
         price: '50 ETH',
-        name: 'Len Davis',
+        name:'지은이',
         numb: '6'
     },
 

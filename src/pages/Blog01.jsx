@@ -46,7 +46,7 @@ function Blog01(props) {
 
                         <div className="col-md-12 ">
                             <div className="load-more">
-                                <a className="tf-button loadmore" href="#">Load more</a>
+                                <a className="tf-button loadmore" href="#">더 불러오기</a>
                             </div>
                         </div>                 
                         

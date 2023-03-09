@@ -119,7 +119,7 @@ function Footer(props) {
                                     <img id="logo_footer" className='logo-dark' src={logodark} alt="Binasea" />
                                     <img id="logo_footer" className='logo-light' src={logo} alt="Binasea" />
                                 </div>
-                                <p className="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+                                <p className="content">NOWNFT에서 원하는 NFT를 찾아보세요.</p>
                                 <ul className="social-item">
                                     <li><Link to="#"><i className="fab fa-twitter"></i></Link></li>
                                     <li><Link to="#"><i className="fab fa-facebook"></i></Link></li>
@@ -128,7 +128,7 @@ function Footer(props) {
                                     <li><Link to="#"><i className="icon-fl-tik-tok-2"></i></Link></li>
                                     <li><Link to="#"><i className="icon-fl-vt"></i></Link></li>
                                 </ul>
-                                <p className="copy-right">Copyright © 2022 Themesflat. All Rights Reserved.
+                                <p className="copy-right">
 
                                 </p>
                             </div>
@@ -136,42 +136,42 @@ function Footer(props) {
                         <div className="col-xl-5 col-lg-6 col-md-5">
                             <div className="widget widget-menu">
                                 <div className="menu menu-1">
-                                    <h6 className="widget-title">Maketplace</h6>
+                                    <h6 className="widget-title">마켓플레이스</h6>
                                     <ul >
-                                        <li><Link to="/explore-v1">Explore</Link></li>
-                                        <li><Link to="/item-details-v1">Item Detail</Link></li>
-                                        <li><Link to="/live-auctions-v1">Live Auditon</Link></li>
+                                        <li><Link to="/explore">탐색</Link></li>
+                                        {/* <li><Link to="/item-details">Item Detail</Link></li>
+                                        <li><Link to="/live-auctions">Live Auditon</Link></li> */}
                                     </ul>
                                 </div>
                                 <div className="menu menu-2">
-                                    <h6 className="widget-title">Stats</h6>
+                                    <h6 className="widget-title">통계</h6>
                                     <ul >
-                                        <li><Link to="/ranking">Ranking</Link></li>
-                                        <li><Link to="/login">Login</Link></li>
-                                        <li><Link to="/create">Create</Link></li>
+                                        <li><Link to="/ranking">랭킹</Link></li>
+                                        <li><Link to="/login">로그인</Link></li>
+                                        <li><Link to="/create">생성하기</Link></li>
                                     </ul>
                                 </div>
                                 <div className="menu menu-3">
-                                    <h6 className="widget-title">Resoure</h6>
+                                    <h6 className="widget-title">콘텐츠</h6>
                                     <ul >
-                                        <li><Link to="/blog-v1">Blogs</Link></li>
-                                        <li><Link to="/help-center">Help and Center</Link></li>
+                                        <li><Link to="/blog-v1">블로그</Link></li>
+                                        <li><Link to="/help-center">고객센터</Link></li>
                                         <li><Link to="/faqs">FaQs</Link></li>
                                     </ul>
                                 </div>
                                 <div className="menu menu-4">
-                                    <h6 className="widget-title">My account</h6>
+                                    <h6 className="widget-title">계정</h6>
                                     <ul >
-                                        <li><Link to="/dashboard">Profile</Link></li>
-                                        <li><Link to="/dashboard">My wallet</Link></li>
+                                        <li><Link to="/dashboard">프로필</Link></li>
+                                        <li><Link to="/dashboard">내 지갑</Link></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <div className="col-xl-3 col-lg-3 col-md-4">
                             <div className="widget widget-subcribe">
-                                <h6 className="widget-title">Subscribe Us</h6>
-                                <p className="content">Signup for our newsletter to get the latest news in your inbox.</p>
+                                <h6 className="widget-title">구독</h6>
+                                <p className="content">받은 편지함에서 최신 뉴스를 받으려면 뉴스레터에 가입하세요.</p>
                                 <form action="#" id="subscribe-form">
                                     <input type="email" placeholder="Info@yourgmail.com" required="" id="subscribe-email" />
                                     <button className="tf-button" type="submit" id="subscribe-button"><i className="icon-fl-send"></i></button>

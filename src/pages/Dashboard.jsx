@@ -64,56 +64,56 @@ function Dashboard(props) {
             img: icon1,
             cate: '',
             title: 'Meta Mask',
-            text : 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. '
+            text : '독자가 페이지를 접속할 때 페이지의 읽을 수 있는 콘텐츠가 산만해 보일 수 있습니다.'
         },
         {
             id: 2,
             img: icon2,
             cate: 'none',
             title: 'Bitski',
-            text : 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. '
+            text : '독자가 페이지를 접속할 때 페이지의 읽을 수 있는 콘텐츠가 산만해 보일 수 있습니다.'
         },
         {
             id: 3,
             img: icon3,
             cate: '',
             title: 'Wallet Connect',
-            text : 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. '
+            text : '독자가 페이지를 접속할 때 페이지의 읽을 수 있는 콘텐츠가 산만해 보일 수 있습니다.'
         },
         {
             id: 4,
             img: icon4,
             cate: 'none',
             title: 'Coin Base',
-            text : 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. '
+            text : '독자가 페이지를 접속할 때 페이지의 읽을 수 있는 콘텐츠가 산만해 보일 수 있습니다.'
         },
         {
             id: 5,
             img: icon5,
             cate: '',
             title: 'Authereum',
-            text : 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. '
+            text : '독자가 페이지를 접속할 때 페이지의 읽을 수 있는 콘텐츠가 산만해 보일 수 있습니다.'
         },
         {
             id: 6,
             img: icon6,
             cate: '',
             title: 'Kaikas',
-            text : 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. '
+            text : '독자가 페이지를 접속할 때 페이지의 읽을 수 있는 콘텐츠가 산만해 보일 수 있습니다.'
         },
         {
             id: 7,
             img: icon7,
             cate: 'none',
             title: 'Torus',
-            text : 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. '
+            text : '독자가 페이지를 접속할 때 페이지의 읽을 수 있는 콘텐츠가 산만해 보일 수 있습니다.'
         },
         {
             id: 8,
             img: icon8,
             cate: '',
             title: 'Fortmatic',
-            text : 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. '
+            text : '독자가 페이지를 접속할 때 페이지의 읽을 수 있는 콘텐츠가 산만해 보일 수 있습니다.'
         },
     ])
     const [dataAuthor] = useState([
@@ -187,10 +187,10 @@ function Dashboard(props) {
                                         <div className="avatar">
                                             <img src={avt} alt="images" />
                                         </div>
-                                        <div className="name">Francisco Maia</div>
+                                        <div className="name">홍길동</div>
                                         <div className="pax"><i className="fab fa-ethereum"></i>0x59485…82590</div>
                                         <div className="description">
-                                            8,888 NFTs of beautiful, Asian women painstakingly-crafted where even the most intricate
+                                        8,888개의 아름다운  NFT가 공들여 제작 되었습니다.
                                         </div>
                                         <ul className="social-item">
                                             <li><Link to="#"><i className="fab fa-facebook-f"></i></Link></li>
@@ -202,15 +202,15 @@ function Dashboard(props) {
                                                     <Tab><a > <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                                 <path className="svg-fill" d="M17.3722 6.47085C17.7995 7.0155 17.3282 7.70964 16.6359 7.70964H2.66602C2.11373 7.70964 1.66602 7.26192 1.66602 6.70964V5.3513C1.66602 3.31797 3.31602 1.66797 5.34935 1.66797H7.28268C8.64102 1.66797 9.06602 2.10964 9.60768 2.83464L10.7744 4.38464C11.0327 4.7263 11.066 4.76797 11.5493 4.76797H13.8744C15.2932 4.76797 16.5581 5.43348 17.3722 6.47085Z" fill="#3749E9"/>
                                                 <path className="svg-fill" d="M17.3194 8.95704C17.8704 8.95704 18.3175 9.40269 18.3194 9.95365L18.3327 13.8739C18.3327 16.3323 16.3327 18.3323 13.8743 18.3323H6.12435C3.66602 18.3323 1.66602 16.3323 1.66602 13.8739V9.95724C1.66602 9.40496 2.11372 8.95725 2.666 8.95724L17.3194 8.95704Z" fill="#3749E9"/>
-                                                </svg> Inventory</a></Tab>
+                                                </svg>목록</a></Tab>
                                                 <Tab><a  > <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                                 <path className="svg-fill" d="M18.3329 9.14297V10.8596C18.3329 11.318 17.9662 11.693 17.4995 11.7096H15.8662C14.9662 11.7096 14.1412 11.0513 14.0662 10.1513C14.0162 9.6263 14.2162 9.13464 14.5662 8.79297C14.8745 8.4763 15.2995 8.29297 15.7662 8.29297H17.4995C17.9662 8.30964 18.3329 8.68464 18.3329 9.14297Z" fill="#3749E9"/>
                                                 <path className="svg-fill" d="M17.0587 12.9596H15.867C14.2837 12.9596 12.9503 11.768 12.817 10.2513C12.742 9.38464 13.0587 8.51797 13.692 7.9013C14.2253 7.3513 14.967 7.04297 15.767 7.04297H17.0587C17.3003 7.04297 17.5003 6.84297 17.4753 6.6013C17.292 4.5763 15.9503 3.19297 13.9587 2.95964C13.7587 2.9263 13.5503 2.91797 13.3337 2.91797H5.83366C5.60033 2.91797 5.37533 2.93464 5.15866 2.96797C3.03366 3.23464 1.66699 4.81797 1.66699 7.08464V12.918C1.66699 15.218 3.53366 17.0846 5.83366 17.0846H13.3337C15.667 17.0846 17.2753 15.6263 17.4753 13.4013C17.5003 13.1596 17.3003 12.9596 17.0587 12.9596ZM10.8337 8.1263H5.83366C5.49199 8.1263 5.20866 7.84297 5.20866 7.5013C5.20866 7.15964 5.49199 6.8763 5.83366 6.8763H10.8337C11.1753 6.8763 11.4587 7.15964 11.4587 7.5013C11.4587 7.84297 11.1753 8.1263 10.8337 8.1263Z" fill="#3749E9"/>
-                                                </svg> Wallet</a></Tab>
+                                                </svg> 지갑</a></Tab>
                                                 <Tab><a  ><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                                 <path className="svg-fill" d="M14.4916 13.0583L11.1249 10H8.86657L5.4999 13.0583C4.55823 13.9083 4.2499 15.2167 4.70823 16.4C5.16657 17.575 6.28323 18.3333 7.54157 18.3333H12.4499C13.7166 18.3333 14.8249 17.575 15.2832 16.4C15.7416 15.2167 15.4332 13.9083 14.4916 13.0583ZM11.5166 15.1167H8.48323C8.16657 15.1167 7.91657 14.8583 7.91657 14.55C7.91657 14.2417 8.1749 13.9833 8.48323 13.9833H11.5166C11.8332 13.9833 12.0832 14.2417 12.0832 14.55C12.0832 14.8583 11.8249 15.1167 11.5166 15.1167Z" fill="#3749E9"/>
                                                 <path className="svg-fill" d="M15.2919 3.6013C14.8335 2.4263 13.7169 1.66797 12.4585 1.66797H7.54188C6.28355 1.66797 5.16688 2.4263 4.70855 3.6013C4.25855 4.78464 4.56688 6.09297 5.50855 6.94297L8.87521 10.0013H11.1335L14.5002 6.94297C15.4335 6.09297 15.7419 4.78464 15.2919 3.6013ZM11.5169 6.0263H8.48355C8.16688 6.0263 7.91688 5.76797 7.91688 5.45964C7.91688 5.1513 8.17522 4.89297 8.48355 4.89297H11.5169C11.8335 4.89297 12.0835 5.1513 12.0835 5.45964C12.0835 5.76797 11.8252 6.0263 11.5169 6.0263Z" fill="#3749E9"/>
-                                                </svg> History</a></Tab>
+                                                </svg> 히스토리</a></Tab>
                                                 <Tab><a  ><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                                 <path className="svg-fill" d="M14.6089 6.4763C14.5505 6.46797 14.4922 6.46797 14.4339 6.4763C13.1422 6.43464 12.1172 5.3763 12.1172 4.0763C12.1172 2.7513 13.1922 1.66797 14.5255 1.66797C15.8505 1.66797 16.9339 2.74297 16.9339 4.0763C16.9255 5.3763 15.9005 6.43464 14.6089 6.4763Z" fill="#3749E9"/>
                                                 <path className="svg-fill" d="M17.3257 12.2503C16.3923 12.8753 15.084 13.1087 13.8757 12.9503C14.1923 12.267 14.359 11.5087 14.3673 10.7087C14.3673 9.87534 14.184 9.08367 13.834 8.392C15.0673 8.22534 16.3757 8.45867 17.3173 9.08367C18.634 9.95034 18.634 11.3753 17.3257 12.2503Z" fill="#3749E9"/>
@@ -218,15 +218,13 @@ function Dashboard(props) {
                                                 <path className="svg-fill" d="M5.45794 10.7088C5.45794 11.5172 5.63294 12.2838 5.94961 12.9755C4.77461 13.1005 3.54961 12.8505 2.64961 12.2588C1.33294 11.3838 1.33294 9.95883 2.64961 9.08383C3.54128 8.48383 4.79961 8.24216 5.98294 8.37549C5.64128 9.07549 5.45794 9.86716 5.45794 10.7088Z" fill="#3749E9"/>
                                                 <path className="svg-fill" d="M10.1 13.225C10.0333 13.2167 9.95833 13.2167 9.88333 13.225C8.35 13.175 7.125 11.9167 7.125 10.3667C7.13333 8.78333 8.40833 7.5 10 7.5C11.5833 7.5 12.8667 8.78333 12.8667 10.3667C12.8583 11.9167 11.6417 13.175 10.1 13.225Z" fill="#3749E9"/>
                                                 <path className="svg-fill" d="M7.39102 14.9492C6.13268 15.7909 6.13268 17.1742 7.39102 18.0076C8.82435 18.9659 11.1743 18.9659 12.6077 18.0076C13.866 17.1659 13.866 15.7826 12.6077 14.9492C11.1827 13.9909 8.83268 13.9909 7.39102 14.9492Z" fill="#3749E9"/>
-                                                </svg> Following </a></Tab>
+                                                </svg> 팔로잉 </a></Tab>
                                                 <Tab><a  ><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                                 <path className="svg-fill" d="M13.1493 1.66797H6.84935C3.69935 1.66797 2.91602 2.50964 2.91602 5.86797V15.2513C2.91602 17.468 4.13268 17.993 5.60768 16.4096L5.61602 16.4013C6.29935 15.6763 7.34102 15.7346 7.93268 16.5263L8.77435 17.6513C9.44935 18.543 10.541 18.543 11.216 17.6513L12.0577 16.5263C12.6577 15.7263 13.6993 15.668 14.3827 16.4013C15.866 17.9846 17.0743 17.4596 17.0743 15.243V5.86797C17.0827 2.50964 16.2993 1.66797 13.1493 1.66797ZM12.291 8.95964H7.70768C7.36602 8.95964 7.08268 8.6763 7.08268 8.33464C7.08268 7.99297 7.36602 7.70964 7.70768 7.70964H12.291C12.6327 7.70964 12.916 7.99297 12.916 8.33464C12.916 8.6763 12.6327 8.95964 12.291 8.95964Z" fill="#3749E9"/>
-                                                </svg> Favorites</a></Tab>
+                                                </svg> 즐겨찾기</a></Tab>
                                                 <Tab><a  ><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                                 <path className="svg-fill" d="M16.2586 4.8763L11.3086 2.01797C10.5003 1.5513 9.50026 1.5513 8.68359 2.01797L3.74193 4.8763C2.93359 5.34297 2.43359 6.20964 2.43359 7.1513V12.8513C2.43359 13.7846 2.93359 14.6513 3.74193 15.1263L8.69193 17.9846C9.50026 18.4513 10.5003 18.4513 11.3169 17.9846L16.2669 15.1263C17.0753 14.6596 17.5753 13.793 17.5753 12.8513V7.1513C17.5669 6.20964 17.0669 5.3513 16.2586 4.8763ZM10.0003 6.11797C11.0753 6.11797 11.9419 6.98464 11.9419 8.05964C11.9419 9.13464 11.0753 10.0013 10.0003 10.0013C8.92526 10.0013 8.05859 9.13464 8.05859 8.05964C8.05859 6.99297 8.92526 6.11797 10.0003 6.11797ZM12.2336 13.8846H7.76693C7.09193 13.8846 6.70026 13.1346 7.07526 12.5763C7.64193 11.7346 8.74193 11.168 10.0003 11.168C11.2586 11.168 12.3586 11.7346 12.9253 12.5763C13.3003 13.1263 12.9003 13.8846 12.2336 13.8846Z" fill="#3749E9"/>
-                                                </svg> Account Setting</a></Tab>
-                
-                                            
+                                                </svg> 계정 설정</a></Tab>
                                         </TabList>
                                     
      
@@ -237,15 +235,15 @@ function Dashboard(props) {
                                 <div className="dashboard-content inventory content-tab">
                                         <TabPanel>
                                             <div className="inner-content inventory">
-                                        <h4 className="title-dashboard">Inventory</h4>
+                                        <h4 className="title-dashboard">목록</h4>
                                         <div className="table-ranking top">
                                             <div className="title-ranking">
-                                                <div className="col-rankingg"><Link to="#">Name</Link></div>
-                                                <div className="col-rankingg"><Link to="#">Category</Link></div>
-                                                <div className="col-rankingg"><Link to="#">Blockchain</Link></div>
-                                                <div className="col-rankingg"><Link to="#">Bid</Link></div>
-                                                <div className="col-rankingg"><Link to="#">Views</Link></div>
-                                                <div className="col-rankingg"><Link to="#">Auction</Link></div>
+                                                <div className="col-rankingg"><Link to="#">이름</Link></div>
+                                                <div className="col-rankingg"><Link to="#">카테고리</Link></div>
+                                                <div className="col-rankingg"><Link to="#">블록체인</Link></div>
+                                                <div className="col-rankingg"><Link to="#">금액</Link></div>
+                                                <div className="col-rankingg"><Link to="#">조회수</Link></div>
+                                                <div className="col-rankingg"><Link to="#">경매상태</Link></div>
                                             </div>
                                         </div>
                                         <div className="table-ranking ">
@@ -326,7 +324,7 @@ function Dashboard(props) {
                                                 <div className="col-rankingg dot"><Link to="#"><i className="fas fa-ellipsis-h"></i></Link></div>
                                             </div>
                                             <div className="table-btn">
-                                                <Link to="#">Load more</Link>
+                                                <Link to="#">더 불러오기</Link>
                                             </div>
                                         </div>
                                             </div>
@@ -334,14 +332,14 @@ function Dashboard(props) {
 
                                         <TabPanel>
                                             <div className="inner-content wallet">
-                                                <h4 className="title-dashboard">Connect Wallet</h4>
+                                                <h4 className="title-dashboard">연결된 지갑</h4>
                                                 <div className="wallet-list">
                                                     {
                                                         dataWallet.map(idx => (
                                                             <div key={idx.id} className="tf-wallet">
                                                                 <div className="icon">
                                                                     <img src={idx.img} alt="Binasea" />
-                                                                    <span className={`label ${idx.cate}`}>BETA</span>
+                                                                    <span className={`label ${idx.cate}`}>베타</span>
                                                                 </div>
                                                                 <h6 className="title"><Link to="#"> {idx.title}</Link></h6>
                                                                 <p className="content">{idx.text} </p>
@@ -352,7 +350,7 @@ function Dashboard(props) {
                                             </div>
                                     </TabPanel>
                                         <TabPanel><div className="inner-content history">
-                                        <h4 className="title-dashboard">History</h4>
+                                        <h4 className="title-dashboard">히스토리</h4>
                                         <div className="history-filter">
                                             <div className="history-content">
                                                 <div className="inner tf-filter-container">
@@ -375,7 +373,7 @@ function Dashboard(props) {
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                                                 <path className="fill-svg" d="M17.9163 14.7012V15.1262C17.9163 15.7429 17.708 16.3346 17.3247 16.8096C17.183 16.9929 16.9497 17.0846 16.708 17.0846H14.4747C14.8163 16.493 14.9997 15.8179 14.9997 15.1262V14.7012C14.9997 13.5012 14.558 12.3931 13.808 11.5514C13.8663 11.5347 13.9163 11.5013 13.9663 11.4763C14.3497 11.2597 14.8247 11.193 15.2747 11.3014C16.8247 11.693 17.9163 13.0845 17.9163 14.7012ZM12.083 2.91797C11.8163 2.91797 11.558 2.94305 11.308 3.00138C12.2997 3.90972 12.9163 5.21797 12.9163 6.66797C12.9163 8.11797 12.2997 9.42622 11.308 10.3346C11.558 10.3929 11.8163 10.418 12.083 10.418C14.1497 10.418 15.833 8.73464 15.833 6.66797C15.833 4.6013 14.1497 2.91797 12.083 2.91797ZM7.91634 2.91797C5.84967 2.91797 4.16634 4.6013 4.16634 6.66797C4.16634 8.73464 5.84967 10.418 7.91634 10.418C9.98301 10.418 11.6663 8.73464 11.6663 6.66797C11.6663 4.6013 9.98301 2.91797 7.91634 2.91797ZM11.108 11.3014C10.958 11.268 10.8163 11.2513 10.6663 11.2513C10.358 11.2513 10.058 11.3263 9.79968 11.4763C9.21635 11.793 8.56634 11.9514 7.91634 11.9514C7.26634 11.9514 6.62468 11.793 6.04968 11.4847C5.77468 11.3347 5.46634 11.2513 5.15801 11.2513C5.02468 11.2513 4.89966 11.268 4.77466 11.293C3.19132 11.6597 2.08301 13.0679 2.08301 14.7012V15.1262C2.08301 15.7429 2.29136 16.3346 2.67469 16.8096C2.81636 16.9929 3.04968 17.0846 3.29135 17.0846H12.5413C12.783 17.0846 13.0163 16.9929 13.158 16.8096C13.5413 16.3346 13.7497 15.7429 13.7497 15.1262V14.7012C13.7497 13.0845 12.658 11.693 11.108 11.3014Z" fill="white"/>
                                                                 </svg>
-                                                                Following
+                                                                팔로잉
                                                         </div>
                                                     </div>
                                                     <div className="history-details tf-loadmore 3d anime">
@@ -397,7 +395,7 @@ function Dashboard(props) {
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                                                 <path className="fill-svg" d="M14.167 2.91797H5.83366C3.33366 2.91797 1.66699 4.16797 1.66699 7.08464V12.918C1.66699 15.8346 3.33366 17.0846 5.83366 17.0846H14.167C16.667 17.0846 18.3337 15.8346 18.3337 12.918V7.08464C18.3337 4.16797 16.667 2.91797 14.167 2.91797ZM14.5587 7.99297L11.9503 10.0763C11.4003 10.518 10.7003 10.7346 10.0003 10.7346C9.30033 10.7346 8.59199 10.518 8.05033 10.0763L5.44199 7.99297C5.17533 7.7763 5.13366 7.3763 5.34199 7.10964C5.55866 6.84297 5.95033 6.79297 6.21699 7.00964L8.82533 9.09297C9.45866 9.6013 10.5337 9.6013 11.167 9.09297L13.7753 7.00964C14.042 6.79297 14.442 6.83464 14.6503 7.10964C14.867 7.3763 14.8253 7.7763 14.5587 7.99297Z" fill="white"></path>
                                                                 </svg>
-                                                                Purchase
+                                                                구매
                                                         </div>
                                                     </div>
                                                     <div className="history-details tf-loadmore 3d pixel">
@@ -418,7 +416,7 @@ function Dashboard(props) {
                                                         <div className="category-filter">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="18" viewBox="0 0 14 18" fill="none">
                                                                 <path className="fill-svg" d="M8.46156 1.67192C8.45896 1.59571 8.37592 1.54636 8.31071 1.58587C5.47538 3.30391 5.50003 7.54287 5.53416 8.38458C5.53704 8.45557 5.46906 8.5043 5.40526 8.47303C5.05493 8.30135 4.14825 7.70609 4.08693 6.12407C4.08397 6.04776 4.00162 5.99931 3.93612 6.03858C2.27758 7.03286 1.16699 8.85521 1.16699 10.875C1.16699 13.9816 3.77866 16.5 7.00033 16.5C10.222 16.5 12.8337 13.9816 12.8337 10.875C12.8336 6.37319 8.5888 5.3961 8.46156 1.67192Z" fill="white" stroke="white" strokeWidth="1.5"/>
-                                                                </svg> Bids
+                                                                </svg> 금액
                                                         </div>
                                                     </div>
                                                     <div className="history-details tf-loadmore 3d cyber">
@@ -439,7 +437,7 @@ function Dashboard(props) {
                                                         <div className="category-filter">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                                                 <path className="fill-svg" d="M14.9257 8.93146H12.3507V2.93146C12.3507 1.53146 11.5924 1.24812 10.6674 2.29812L10.0007 3.05646L4.35908 9.47312C3.58408 10.3481 3.90908 11.0648 5.07574 11.0648H7.65074V17.0648C7.65074 18.4648 8.40907 18.7481 9.33407 17.6981L10.0007 16.9398L15.6424 10.5231C16.4174 9.64812 16.0924 8.93146 14.9257 8.93146Z" fill="white"/>
-                                                                </svg> Offers
+                                                                </svg> 제안하기
                                                         </div>
                                                     </div>
                                                     <div className="history-details tf-loadmore 3d cyber music">
@@ -460,7 +458,7 @@ function Dashboard(props) {
                                                         <div className="category-filter">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                                                 <path className="fill-svg" d="M3.05262 11.0112L7.8241 16.0398C9.00708 17.2866 10.9936 17.2866 12.1766 16.0398L16.948 11.0112C18.7955 9.06416 18.7955 5.90735 16.948 3.96029C15.1005 2.01323 12.1051 2.01324 10.2576 3.9603C10.1178 4.10771 9.88288 4.10771 9.743 3.9603C7.8955 2.01324 4.90012 2.01324 3.05262 3.96029C1.20512 5.90735 1.20512 9.06416 3.05262 11.0112Z" fill="white"/>
-                                                                </svg> Likes
+                                                                </svg> 좋아요
                                                         </div>
                                                     </div>
                                                     <div className="history-details tf-loadmore 3d cyber pixel">
@@ -481,12 +479,12 @@ function Dashboard(props) {
                                                         <div className="category-filter">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="18" viewBox="0 0 14 18" fill="none">
                                                                 <path className="fill-svg" d="M8.46156 1.67192C8.45896 1.59571 8.37592 1.54636 8.31071 1.58587C5.47538 3.30391 5.50003 7.54287 5.53416 8.38458C5.53704 8.45557 5.46906 8.5043 5.40526 8.47303C5.05493 8.30135 4.14825 7.70609 4.08693 6.12407C4.08397 6.04776 4.00162 5.99931 3.93612 6.03858C2.27758 7.03286 1.16699 8.85521 1.16699 10.875C1.16699 13.9816 3.77866 16.5 7.00033 16.5C10.222 16.5 12.8337 13.9816 12.8337 10.875C12.8336 6.37319 8.5888 5.3961 8.46156 1.67192Z" fill="white" stroke="white" strokeWidth="1.5"/>
-                                                                </svg> Bids
+                                                                </svg> 금액
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div className="table-btn">
-                                                    <Link to="#">Load more</Link>
+                                                    <Link to="#">더 불러오기</Link>
                                                 </div>
                                             </div>
                                             <div className="history-sidebar">
@@ -534,7 +532,7 @@ function Dashboard(props) {
                                         </div>
                                     </div></TabPanel>
                                         <TabPanel><div className="inner-content follow">
-                                        <h4 className="title-dashboard">Following</h4>
+                                        <h4 className="title-dashboard">팔로잉</h4>
                                         <div className="content-follow">
                                             {
                                                 dataAuthor.map(idx => (
@@ -544,27 +542,27 @@ function Dashboard(props) {
                                                         </div>
                                                         <div className="name"> <Link to="#">{idx.name}</Link> </div>
                                                         <div className="details">
-                                                            <span>{idx.item}</span> Items
+                                                            <span>{idx.item}</span> 개
                                                         </div>
-                                                        <Link to="#" className="btn-follow">Following</Link>
+                                                        <Link to="#" className="btn-follow">팔로잉</Link>
                                                         <Link to="#" className="option"><i className="fas fa-ellipsis-h"></i></Link>
                                                     </div>
                                                 ))
                                             }
     
                                             <div className="table-btn">
-                                                <Link to="#">Load more</Link>
+                                                <Link to="#">더 불러오기</Link>
                                             </div>
                                         </div>
                                     </div></TabPanel>
                                         <TabPanel><div className="inner-content inventory favorite">
-                                        <h4 className="title-dashboard">Favorirtes</h4>
+                                        <h4 className="title-dashboard">즐겨찾기</h4>
                                         <div className="table-ranking top">
                                             <div className="title-ranking">
-                                                <div className="col-rankingg"><Link to="#">Name</Link></div>
-                                                <div className="col-rankingg"><Link to="#">Blockchain</Link></div>
-                                                <div className="col-rankingg"><Link to="#">Author</Link></div>
-                                                <div className="col-rankingg"><Link to="#">Price</Link></div>
+                                                <div className="col-rankingg"><Link to="#">이름</Link></div>
+                                                <div className="col-rankingg"><Link to="#">블록체인</Link></div>
+                                                <div className="col-rankingg"><Link to="#">작성자</Link></div>
+                                                <div className="col-rankingg"><Link to="#">가격</Link></div>
                                             </div>
                                         </div>
                                         <div className="table-ranking ">
@@ -723,45 +721,45 @@ function Dashboard(props) {
                                                 <div className="dot"><Link to="#"><i className="fas fa-ellipsis-h"></i></Link></div>
                                             </div>
                                             <div className="table-btn">
-                                                <Link to="#">Load more</Link>
+                                                <Link to="#">더 불러오기</Link>
                                             </div>
                                         </div>
                                     </div></TabPanel>
                                         <TabPanel><div className="inner-content profile">
-                                        <h4 className="title-dashboard">Edit Profile</h4>
+                                        <h4 className="title-dashboard">프로필 수정</h4>
                                         <form action="#" className="form-edit-profile">
                                             <div className="user-profile">
                                                 <div className="title">Contact details</div>
                                                 <fieldset>
-                                                    <h6>Full Name</h6>
+                                                    <h6>이름</h6>
                                                     <input type="text" placeholder="Francisco Maia" required />
                                                 </fieldset>
                                                 <fieldset>
-                                                    <h6>Gender</h6>
+                                                    <h6>성</h6>
                                                     <input type="text" placeholder="Female" required />
                                                 </fieldset>
                                                 <fieldset>
-                                                    <h6>Date of birth</h6>
+                                                    <h6>생년월일</h6>
                                                     <input type="text" placeholder="January 24, 1983" required />
                                                 </fieldset>
                                             </div>
                                             <div className="user-profile">
-                                                <div className="title">Contact details</div>
+                                                <div className="title">자세한 정보</div>
                                                 <fieldset>
-                                                    <h6>Email Address</h6>
+                                                    <h6>이메일 주소</h6>
                                                     <input type="text" placeholder="Francisco Maia" required />
                                                 </fieldset>
                                                 <fieldset>
-                                                    <h6>Gender</h6>
+                                                    <h6>성</h6>
                                                     <input type="text" placeholder="seb.bennett@gmail.com" required />
                                                 </fieldset>
                                                 <fieldset>
-                                                    <h6>Address</h6>
+                                                    <h6>주소</h6>
                                                     <input type="text" placeholder="83222 Dicki View, South Pasqualeview, RI 79216-3100" required />
                                                 </fieldset>
                                             </div>
                                             <button className="btn-form" type="submit">
-                                                Update Settings
+                                                수정하기
                                             </button>
                                         </form>
                                     </div></TabPanel>

@@ -77,7 +77,7 @@ function Login(props) {
               </div> */}
 
               <form action="#" id="contactform">
-                <div className="title-login">login with account</div>
+                <div className="title-login">계정으로 로그인</div>
                 <fieldset>
                   <input
                     id="name"

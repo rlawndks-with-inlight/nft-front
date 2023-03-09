@@ -1,12 +1,12 @@
 import Blog01 from "./Blog01";
-import Blog02 from "./Blog02";
+import Blog from "./Blog";
 import BlogDetails01 from "./BlogDetails01";
 import BlogDetails02 from "./BlogDetails02";
 import Collection from "./Collection";
 import Contact from "./Contact";
 import Create from "./Create";
 import Dashboard from "./Dashboard";
-import Explore01 from "./Explore01";
+import Explore from "./Explore";
 import Explore02 from "./Explore02";
 import Explore03 from "./Explore03";
 import Explore04 from "./Explore04";
@@ -36,7 +36,7 @@ const routes = [
   // { path: '/home-v4', component: <Home04 />},
   // { path: '/home-v5', component: <Home05 />},
   // { path: '/home-v6', component: <Home06 />},
-  { path: '/explore', component: <Explore01 />},
+  { path: '/explore', component: <Explore />},
   // { path: '/explore-v2', component: <Explore02 />},
   // { path: '/explore-v3', component: <Explore03 />},
   // { path: '/explore-v4', component: <Explore04 />},
@@ -54,7 +54,7 @@ const routes = [
   { path: '/signup', component: <SignUp />},
   { path: '/create', component: <Create />},
   // { path: '/blog-v1', component: <Blog01 />},
-  { path: '/blog', component: <Blog02 />},
+  { path: '/blog', component: <Blog />},
   { path: '/blog-details-v1', component: <BlogDetails01 />},
   { path: '/blog-details-v2', component: <BlogDetails02 />},
   { path: '/contact', component: <Contact />},

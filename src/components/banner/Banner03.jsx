@@ -112,9 +112,9 @@ function Banner03(props) {
                                         <img src="assets/images/slider/slider-14.png" alt="Binasea" className="img-star star-3 ani4" />
                                         <img src="assets/images/slider/slider-15.png" alt="Binasea" className="img-star star-4 ani5" />
                                         <h1 className="heading">
-                                            Defind, Collect and Sell Super Rate <span>NFT</span>   
+                                            수집 및 판매 <span>NFT</span>   
                                         </h1>
-                                        <p className="sub-heading">Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Integer Nec Odio. Praesent Libero. Sed Cursus Ante Dapibus Diam.</p>
+                                        <p className="sub-heading">NFT 마켓에 오신 것을 환영합니다.</p>
                                         <div className="btn-slider ">
                                             <Link to="/explore-v1" className="tf-button style-6">Explore now</Link>
                                             <Link to="/create" className="tf-button style-7">Creat</Link>
@@ -131,9 +131,9 @@ function Banner03(props) {
                                         <img src="assets/images/slider/slider-14.png" alt="Binasea" className="img-star star-3 ani4" />
                                         <img src="assets/images/slider/slider-15.png" alt="Binasea" className="img-star star-4 ani5" />
                                         <h1 className="heading">
-                                            Defind, Collect and Sell Super Rate <span>NFT</span>   
+                                           수집 및 판매 <span>NFT</span>   
                                         </h1>
-                                        <p className="sub-heading">Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Integer Nec Odio. Praesent Libero. Sed Cursus Ante Dapibus Diam.</p>
+                                        <p className="sub-heading">NFT 마켓에 오신 것을 환영합니다.</p>
                                         <div className="btn-slider ">
                                             <Link to="/explore-v1" className="tf-button style-6">Explore now</Link>
                                             <Link to="/create" className="tf-button style-7">Creat</Link>
@@ -150,9 +150,9 @@ function Banner03(props) {
                                         <img src="assets/images/slider/slider-14.png" alt="Binasea" className="img-star star-3 ani4" />
                                         <img src="assets/images/slider/slider-15.png" alt="Binasea" className="img-star star-4 ani5" />
                                         <h1 className="heading">
-                                            Defind, Collect and Sell Super Rate <span>NFT</span>   
+                                           수집 및 판매 <span>NFT</span>   
                                         </h1>
-                                        <p className="sub-heading">Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Integer Nec Odio. Praesent Libero. Sed Cursus Ante Dapibus Diam.</p>
+                                        <p className="sub-heading">NFT 마켓에 오신 것을 환영합니다.</p>
                                         <div className="btn-slider ">
                                             <Link to="/explore-v1" className="tf-button style-6">Explore now</Link>
                                             <Link to="/create" className="tf-button style-7">Creat</Link>
@@ -169,9 +169,9 @@ function Banner03(props) {
                                         <img src="assets/images/slider/slider-14.png" alt="Binasea" className="img-star star-3 ani4" />
                                         <img src="assets/images/slider/slider-15.png" alt="Binasea" className="img-star star-4 ani5" />
                                         <h1 className="heading">
-                                            Defind, Collect and Sell Super Rate <span>NFT</span>   
+                                           수집 및 판매 <span>NFT</span>   
                                         </h1>
-                                        <p className="sub-heading">Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Integer Nec Odio. Praesent Libero. Sed Cursus Ante Dapibus Diam.</p>
+                                        <p className="sub-heading">NFT 마켓에 오신 것을 환영합니다.</p>
                                         <div className="btn-slider ">
                                             <Link to="/explore-v1" className="tf-button style-6">Explore now</Link>
                                             <Link to="/create" className="tf-button style-7">Creat</Link>
@@ -188,9 +188,9 @@ function Banner03(props) {
                                         <img src="assets/images/slider/slider-14.png" alt="Binasea" className="img-star star-3 ani4" />
                                         <img src="assets/images/slider/slider-15.png" alt="Binasea" className="img-star star-4 ani5" />
                                         <h1 className="heading">
-                                            Defind, Collect and Sell Super Rate <span>NFT</span>   
+                                           수집 및 판매 <span>NFT</span>   
                                         </h1>
-                                        <p className="sub-heading">Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Integer Nec Odio. Praesent Libero. Sed Cursus Ante Dapibus Diam.</p>
+                                        <p className="sub-heading">NFT 마켓에 오신 것을 환영합니다.</p>
                                         <div className="btn-slider ">
                                             <Link to="/explore-v1" className="tf-button style-6">Explore now</Link>
                                             <Link to="/create" className="tf-button style-7">Creat</Link>

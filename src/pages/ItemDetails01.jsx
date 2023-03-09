@@ -273,7 +273,7 @@ function ItemDetails01(props) {
                           </li>
                           <li>
                             <Link to="#" className="active">
-                              See more
+                              더 불러오기
                             </Link>
                           </li>
                         </ul>

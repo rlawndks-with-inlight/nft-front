@@ -70,9 +70,9 @@ function Contact(props) {
                 </fieldset>
                 <div className="form-select" id="subject">
                   <select>
-                    <option value="1">Select subject</option>
-                    <option value="2">Select subject</option>
-                    <option value="3">Select subject</option>
+                    <option value="1">문의</option>
+                    <option value="2">질문</option>
+                    <option value="3">불만사항</option>
                   </select>
                   <i className="icon-fl-down"></i>
                 </div>

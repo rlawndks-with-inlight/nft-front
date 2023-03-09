@@ -54,7 +54,7 @@ function Banner01(props) {
                                             <img src={img2} alt="Binasea" className="img-slider-3 ani5" />
                                             
                                             <div className="current-bid ">
-                                                <div className="title">Current bid</div>
+                                                <div className="title">현재 입찰가</div>
                                                 <div className="price">{idx.price}</div>
                                             </div>
                                             <div className="card-infor ani5">

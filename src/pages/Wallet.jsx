@@ -22,56 +22,56 @@ function Wallet(props) {
             img: icon1,
             cate: '',
             title: 'Meta Mask',
-            text : 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. '
+            text : '독자가 페이지를 접속할 때 페이지의 읽을 수 있는 콘텐츠가 산만해 보일 수 있습니다.'
         },
         {
             id: 2,
             img: icon2,
             cate: 'none',
             title: 'Bitski',
-            text : 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. '
+            text : '독자가 페이지를 접속할 때 페이지의 읽을 수 있는 콘텐츠가 산만해 보일 수 있습니다.'
         },
         {
             id: 3,
             img: icon3,
             cate: '',
             title: 'Wallet Connect',
-            text : 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. '
+            text : '독자가 페이지를 접속할 때 페이지의 읽을 수 있는 콘텐츠가 산만해 보일 수 있습니다.'
         },
         {
             id: 4,
             img: icon4,
             cate: 'none',
             title: 'Coin Base',
-            text : 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. '
+            text : '독자가 페이지를 접속할 때 페이지의 읽을 수 있는 콘텐츠가 산만해 보일 수 있습니다.'
         },
         {
             id: 5,
             img: icon5,
             cate: '',
             title: 'Authereum',
-            text : 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. '
+            text : '독자가 페이지를 접속할 때 페이지의 읽을 수 있는 콘텐츠가 산만해 보일 수 있습니다.'
         },
         {
             id: 6,
             img: icon6,
             cate: '',
             title: 'Kaikas',
-            text : 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. '
+            text : '독자가 페이지를 접속할 때 페이지의 읽을 수 있는 콘텐츠가 산만해 보일 수 있습니다.'
         },
         {
             id: 7,
             img: icon7,
             cate: 'none',
             title: 'Torus',
-            text : 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. '
+            text : '독자가 페이지를 접속할 때 페이지의 읽을 수 있는 콘텐츠가 산만해 보일 수 있습니다.'
         },
         {
             id: 8,
             img: icon8,
             cate: '',
             title: 'Fortmatic',
-            text : 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. '
+            text : '독자가 페이지를 접속할 때 페이지의 읽을 수 있는 콘텐츠가 산만해 보일 수 있습니다.'
         },
     ])
     return (
@@ -83,8 +83,8 @@ function Wallet(props) {
                         <div className="col-md-12">
 
                             <ul className="breadcrumbs">
-                                <li><Link to="#">Pages</Link></li>
-                                <li>Wallet</li>
+                                <li><Link to="#">페이지</Link></li>
+                                <li>지갑</li>
                             </ul>
                    
                         </div>
@@ -97,8 +97,8 @@ function Wallet(props) {
                     <div className="row justify-content-center">
                         <div className="col-md-12">
                             <div className="tf-heading style-5">
-                                <h4 className="heading">Connect Your Wallet</h4>
-                                <p className="sub-heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum obcaecati dignissimos quae quo ad iste ipsum officiis deleniti asperiores sit. </p>
+                                <h4 className="heading">지갑 연동하기</h4>
+                                <p className="sub-heading"></p>
                             </div>
                         </div>
                         {
@@ -107,7 +107,7 @@ function Wallet(props) {
                                     <div className="tf-wallet">
                                         <div className="icon">
                                             <img src={idx.img} alt="Binasea" />
-                                            <span className={`label ${idx.cate}`}>BETA</span>
+                                            <span className={`label ${idx.cate}`}>베타</span>
                                         </div>
                                         <h6 className="title"><Link to="#">{idx.title}</Link></h6>
                                         <p className="content">{idx.text}</p>

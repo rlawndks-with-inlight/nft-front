@@ -4,11 +4,11 @@ import PageTitle from '../components/pagetitle/PageTitle';
 import HotPick from '../components/hotpick/HotPick';
 import dataHotpick from '../assets/fake-data/data-hotpick';
 
-Explore01.propTypes = {
+Explore.propTypes = {
     
 };
 
-function Explore01(props) {
+function Explore(props) {
     return (
         <div className='page-explore'>
             <PageTitle none='none'  title='마켓' />
@@ -19,4 +19,4 @@ function Explore01(props) {
     );
 }
 
-export default Explore01;
+export default Explore;

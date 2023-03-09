@@ -69,7 +69,7 @@ function Banner02(props) {
                                                         <div className="creator"> <Link to="#">{idx.tag}</Link> </div>
                                                     </div>
                                                     <div className="price">
-                                                        <div className="subtitle">Current bid</div>
+                                                        <div className="subtitle">현재 입찰가</div>
                                                         <div className="cash">{idx.price}</div>
                                                     </div>
                                                     

@@ -15,8 +15,8 @@ function SignUp(props) {
                     <div className="row">
                         <div className="col-md-12">
                             <ul className="breadcrumbs">
-                                <li><Link to="/blog-v2">Home</Link></li>
-                                <li>Sign Up</li>
+                                <li><Link to="/blog-v2">홈</Link></li>
+                                <li>회원가입</li>
                             </ul>
                    
                         </div>

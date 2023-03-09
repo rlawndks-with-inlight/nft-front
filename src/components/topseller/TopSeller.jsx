@@ -14,7 +14,7 @@ function TopSeller(props) {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="tf-heading mb40 ">
-                                <h4 className="heading">Top Seller</h4>
+                                <h4 className="heading">베스트 셀러</h4>
                             </div>
                         </div>
 

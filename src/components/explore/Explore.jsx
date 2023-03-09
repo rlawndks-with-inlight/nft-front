@@ -96,7 +96,7 @@ function Explore(props) {
                                                                     <div className="creator"> <Link to="#">{idx.create}</Link> </div>
                                                                 </div>
                                                                 <div className="price">
-                                                                    <div className="subtitle">Current bid</div>
+                                                                    <div className="subtitle">현재 입찰가</div>
                                                                     <div className="cash">{idx.price}</div>
                                                                 </div>
                                                                 <div className="profile-author">
@@ -120,7 +120,7 @@ function Explore(props) {
                         </div>
                         <div className="col-md-12">
                             <div className="btn-loadmore mt8 wow fadeInUp">
-                                <Link to="/explore-v1" className="tf-button loadmore style-4">Load more</Link>
+                                <Link to="/explore-v1" className="tf-button loadmore style-4">더 불러오기</Link>
                             </div>
                         </div>
                     </div>

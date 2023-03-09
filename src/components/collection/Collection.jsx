@@ -22,8 +22,8 @@ function Collection(props) {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="tf-heading mb30 wow fadeInUp">
-                                <h4 className="heading">Popular Collection</h4>
-                                <a className="button style-2" href="/collection">Explore<i className="fal fa-long-arrow-right"></i></a>
+                                <h4 className="heading">인기 컬렉션</h4>
+                                <a className="button style-2" href="/collection">마켓<i className="fal fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                         <div className="col-md-12">

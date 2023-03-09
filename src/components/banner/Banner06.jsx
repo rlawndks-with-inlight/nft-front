@@ -98,7 +98,7 @@ function Banner06(props) {
                                                                     </div>
                                                                 </div>
                                                                 <div className="bid">
-                                                                    <div className="subtitle">Current bid</div>
+                                                                    <div className="subtitle">현재 입찰가</div>
                                                                     <div className="price">
                                                                         <span className="cash">5 ETH</span><span className="icon"><img src={icon3} alt="images" /></span>
                                                                     </div>

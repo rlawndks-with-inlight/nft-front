@@ -18,48 +18,48 @@ const dataHotpick = [
         id: 1,
         img: img1,
         avt: avt,
-        title: 'Giulia Glur #32',
-        create: 'Magnus Perry',
+        title: '홍길동 #32',
+        create: '지은이',
         price : '0.0041'
     },
     {
         id: 2,
         img: img2,
         avt: avt,
-        title: 'Giulia Glur #32',
-        create: 'Frederick Dixon',
+        title: '김철수 #32',
+        create: '지은이',
         price : '0.0041'
     },
     {
         id: 3,
         img: img3,
         avt: avt,
-        title: 'Archetype #588',
-        create: 'Theo Watts',
+        title: '박맹구 #588',
+        create: '지은이',
         price : '0.0041'
     },
     {
         id: 4,
         img: img4,
         avt: avt,
-        title: '3DPunks #070',
-        create: 'Neville Gutierrez',
+        title: '이훈이 #070',
+        create: '지은이',
         price : '0.0041'
     },
     {
         id: 5,
         img: img5,
         avt: avt,
-        title: 'Angelic Nyan Cat',
-        create: 'Frederick Dixon',
+        title: '김기명 Nyan Cat',
+        create: '지은이',
         price : '0.0041'
     },
     {
         id: 6,
         img: img6,
         avt: avt,
-        title: 'Sweet Baby #1',
-        create: 'Stephan Neal',
+        title: '권지태 #1',
+        create: '지은이',
         price : '0.0041'
     },
 
@@ -67,16 +67,16 @@ const dataHotpick = [
         id: 7,
         img: img7,
         avt: avt,
-        title: 'Giulia Glur #32',
-        create: 'Magnus Perry',
+        title: '한신우 #32',
+        create: '지은이',
         price : '0.0041'
     },
     {
         id: 8,
         img: img8,
         avt: avt,
-        title: 'Giulia Glur #32',
-        create: 'Frederick Dixon',
+        title: '사자 #32',
+        create: '지은이',
         price : '0.0041'
     },
 
@@ -84,32 +84,32 @@ const dataHotpick = [
         id: 9,
         img: img9,
         avt: avt,
-        title: 'Giulia Glur #32',
-        create: 'Magnus Perry',
+        title: '호랭이 #32',
+        create: '지은이',
         price : '0.0041'
     },
     {
         id: 10,
         img: img10,
         avt: avt,
-        title: 'Giulia Glur #32',
-        create: 'Frederick Dixon',
+        title: '토끼 #32',
+        create: '지은이',
         price : '0.0041'
     },
     {
         id: 11,
         img: img11,
         avt: avt,
-        title: 'Archetype #588',
-        create: 'Theo Watts',
+        title: '물개 #588',
+        create: '지은이',
         price : '0.0041'
     },
     {
         id: 12,
         img: img12,
         avt: avt,
-        title: '3DPunks #070',
-        create: 'Neville Gutierrez',
+        title: '쥐 #070',
+        create: '지은이',
         price : '0.0041'
     },
     

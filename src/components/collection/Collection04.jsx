@@ -84,13 +84,13 @@ function Collection04(props) {
 
                                         <Dropdown.Menu>
                                         <Dropdown.Item href="#">
-                                            <li><span>Recently Listed</span></li>
+                                            <li><span>최근 상장된 상품</span></li>
                                         </Dropdown.Item>
                                         <Dropdown.Item href="#">
-                                            <li className="active"><span>Recently Created</span></li>
+                                            <li className="active"><span>최근 생성된 상품</span></li>
                                         </Dropdown.Item>
                                         <Dropdown.Item href="#">
-                                            <li><span>Recently Sold</span></li>
+                                            <li><span>최근 판매된 상품</span></li>
                                         </Dropdown.Item>
                                         
                                         </Dropdown.Menu>
