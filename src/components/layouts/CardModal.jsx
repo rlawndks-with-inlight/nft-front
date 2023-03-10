@@ -13,25 +13,25 @@ return (
     <Modal.Header closeButton></Modal.Header>
 
     <div className="modal-body space-y-20 pd-40">
-        <h3>Place a Bid</h3>
-        <p className="text-center sub-heading">You must bid a least <span className="price color-popup">4.89 ETH</span></p>
+        <h3>입찰하기</h3>
+        <p className="text-center sub-heading">최소 <span className="price color-popup">4.89 ETH</span>를 입찰해야 합니다.</p>
         <input type="text" className="form-control" placeholder="00.00 ETH" />
-        <p className="label-1">Enter quantity. <span className="color-popup">5 available</span>
+        <p className="label-1">수량을 입력합니다. <span className="color-popup">5개 가능</span>
         </p>
         <input type="text" className="form-control quantity form-bottom" />
         <div className="d-flex justify-content-between detail-1">
-            <p> You must bid at least:</p>
+            <p> 최소 입찰 가격:</p>
             <p className="text-right price color-popup"> 4.89 ETH </p>
         </div>
         <div className="d-flex justify-content-between detail-2">
-            <p> Service free:</p>
+            <p> 서비스 무료:</p>
             <p className="text-right price color-popup"> 0,89 ETH </p>
         </div>
         <div className="d-flex justify-content-between detail-3">
-            <p> Total bid amount:</p>
+            <p> 총 입찰 금액:</p>
             <p className="text-right price color-popup"> 4 ETH </p>
         </div>
-        <Link to="/wallet-connect" className="button-popup" data-toggle="modal" data-target="#popup_bid_success" data-dismiss="modal" aria-label="Close"> Place a bid</Link>
+        <Link to="/wallet" className="button-popup" data-toggle="modal" data-target="#popup_bid_success" data-dismiss="modal" aria-label="Close"> 입찰하기</Link>
     </div>
     </Modal>
     

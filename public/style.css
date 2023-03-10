@@ -1126,7 +1126,7 @@ header #site-header-inner {
 }
 header #site-header-inner #site-logo {
   flex-shrink: 0;
-  margin-right: 14.7%;
+  margin-right: 14.7% !important;
 }
 header #site-header-inner #main-nav {
   flex-shrink: 1;

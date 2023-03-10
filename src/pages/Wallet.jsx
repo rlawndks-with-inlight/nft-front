@@ -17,62 +17,62 @@ Wallet.propTypes = {
 
 function Wallet(props) {
     const [dataWallet] = useState([
-        {
-            id: 1,
-            img: icon1,
-            cate: '',
-            title: 'Meta Mask',
-            text : '독자가 페이지를 접속할 때 페이지의 읽을 수 있는 콘텐츠가 산만해 보일 수 있습니다.'
-        },
-        {
-            id: 2,
-            img: icon2,
-            cate: 'none',
-            title: 'Bitski',
-            text : '독자가 페이지를 접속할 때 페이지의 읽을 수 있는 콘텐츠가 산만해 보일 수 있습니다.'
-        },
-        {
-            id: 3,
-            img: icon3,
-            cate: '',
-            title: 'Wallet Connect',
-            text : '독자가 페이지를 접속할 때 페이지의 읽을 수 있는 콘텐츠가 산만해 보일 수 있습니다.'
-        },
-        {
-            id: 4,
-            img: icon4,
-            cate: 'none',
-            title: 'Coin Base',
-            text : '독자가 페이지를 접속할 때 페이지의 읽을 수 있는 콘텐츠가 산만해 보일 수 있습니다.'
-        },
-        {
-            id: 5,
-            img: icon5,
-            cate: '',
-            title: 'Authereum',
-            text : '독자가 페이지를 접속할 때 페이지의 읽을 수 있는 콘텐츠가 산만해 보일 수 있습니다.'
-        },
+        // {
+        //     id: 1,
+        //     img: icon1,
+        //     cate: '',
+        //     title: 'Meta Mask',
+        //     text : '독자가 페이지를 접속할 때 페이지의 읽을 수 있는 콘텐츠가 산만해 보일 수 있습니다.'
+        // },
+        // {
+        //     id: 2,
+        //     img: icon2,
+        //     cate: 'none',
+        //     title: 'Bitski',
+        //     text : '독자가 페이지를 접속할 때 페이지의 읽을 수 있는 콘텐츠가 산만해 보일 수 있습니다.'
+        // },
+        // {
+        //     id: 3,
+        //     img: icon3,
+        //     cate: '',
+        //     title: 'Wallet Connect',
+        //     text : '독자가 페이지를 접속할 때 페이지의 읽을 수 있는 콘텐츠가 산만해 보일 수 있습니다.'
+        // },
+        // {
+        //     id: 4,
+        //     img: icon4,
+        //     cate: 'none',
+        //     title: 'Coin Base',
+        //     text : '독자가 페이지를 접속할 때 페이지의 읽을 수 있는 콘텐츠가 산만해 보일 수 있습니다.'
+        // },
+        // {
+        //     id: 5,
+        //     img: icon5,
+        //     cate: '',
+        //     title: 'Authereum',
+        //     text : '독자가 페이지를 접속할 때 페이지의 읽을 수 있는 콘텐츠가 산만해 보일 수 있습니다.'
+        // },
         {
             id: 6,
             img: icon6,
             cate: '',
             title: 'Kaikas',
-            text : '독자가 페이지를 접속할 때 페이지의 읽을 수 있는 콘텐츠가 산만해 보일 수 있습니다.'
+            text : ''
         },
-        {
-            id: 7,
-            img: icon7,
-            cate: 'none',
-            title: 'Torus',
-            text : '독자가 페이지를 접속할 때 페이지의 읽을 수 있는 콘텐츠가 산만해 보일 수 있습니다.'
-        },
-        {
-            id: 8,
-            img: icon8,
-            cate: '',
-            title: 'Fortmatic',
-            text : '독자가 페이지를 접속할 때 페이지의 읽을 수 있는 콘텐츠가 산만해 보일 수 있습니다.'
-        },
+        // {
+        //     id: 7,
+        //     img: icon7,
+        //     cate: 'none',
+        //     title: 'Torus',
+        //     text : '독자가 페이지를 접속할 때 페이지의 읽을 수 있는 콘텐츠가 산만해 보일 수 있습니다.'
+        // },
+        // {
+        //     id: 8,
+        //     img: icon8,
+        //     cate: '',
+        //     title: 'Fortmatic',
+        //     text : '독자가 페이지를 접속할 때 페이지의 읽을 수 있는 콘텐츠가 산만해 보일 수 있습니다.'
+        // },
     ])
     return (
         <div>

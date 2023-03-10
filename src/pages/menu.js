@@ -57,7 +57,7 @@ const menus = [
         // ]
     },
     {
-        id: 4,
+        id: 3,
         name: '대시보드',
         links: '/dashboard',
         // namesub: [
@@ -99,41 +99,40 @@ const menus = [
         // ],
     },
     {
-        id: 5,
+        id: 4,
         name: '생성하기',
         links: '/create',
     },
-    {
-        id: 6,
-        name: '블로그',
-        links: '/blog',
-        // namesub: [
-        //     {
-        //         id: 1,
-        //         sub: 'Blog v1',
-        //         links: '/blog-v1'
-        //     },
-        //     {
-        //         id: 2,
-        //         sub: 'Blog v2',
-        //         links: '/blog-v2'
-        //     },
-        //     {
-        //         id: 3,
-        //         sub: 'Blog Details v1',
-        //         links: '/blog-details-v1'
-        //     },
-        //     {
-        //         id: 4,
-        //         sub: 'Blog Details v2',
-        //         links: '/blog-details-v2'
-        //     },
+    // {
+    //     id: 6,
+    //     name: '블로그',
+    //     links: '/blog',
+    //     // namesub: [
+    //     //     {
+    //     //         id: 1,
+    //     //         sub: 'Blog v1',
+    //     //         links: '/blog-v1'
+    //     //     },
+    //     //     {
+    //     //         id: 2,
+    //     //         sub: 'Blog v2',
+    //     //         links: '/blog-v2'
+    //     //     },
+    //     //     {
+    //     //         id: 3,
+    //     //         sub: 'Blog Details v1',
+    //     //         links: '/blog-details-v1'
+    //     //     },
+    //     //     {
+    //     //         id: 4,
+    //     //         sub: 'Blog Details v2',
+    //     //         links: '/blog-details-v2'
+    //     //     },
 
-        // ],
-    },
-
+    //     // ],
+    // },
     {
-        id: 7,
+        id: 5,
         name: '고객센터',
         links: '/contact',
     },
