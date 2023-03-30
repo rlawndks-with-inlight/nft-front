@@ -160,7 +160,7 @@ function Explore2(props) {
           </div>
           <div className="col-md-12">
             <div className="btn-loadmore mt8 wow fadeInUp">
-              <Link to="/explore-v1" className="tf-button loadmore style-4">
+              <Link to="/explore" className="tf-button loadmore style-4">
                 더 불러오기
               </Link>
             </div>
