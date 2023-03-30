@@ -16,17 +16,7 @@ export const needTwoImage = ['issue', 'theme', 'feature'];
 export const zSidebar = [
     sidebarContentFormat('회원관리', [
         sidebarObjListFormat('회원관리', '/manager/list/user', 40, ['/manager/list/user']),//edit
-        sidebarObjListFormat('회원통계', '/manager/list/user_statistics', 40, ['/manager/list/user_statistics']),//edit
-        sidebarObjListFormat('댓글관리', '/manager/list/comment', 40, ['/manager/list/comment']),//edit
-        sidebarObjListFormat('장바구니관리', '/manager/list/bag', 40, ['/manager/list/bag']),//edit
-        sidebarObjListFormat('결제내역관리', '/manager/list/subscribe', 40, ['/manager/list/subscribe']),//list
-        sidebarObjListFormat('결제엑셀업로드', '/manager/edit/pay_excel', 40, ['/manager/edit/pay_excel']),//list
     ], <BsPerson />),
-    sidebarContentFormat('강의관리', [
-        sidebarObjListFormat('전문가관리', '/manager/list/master?level=30', 40, ['/manager/list/master']),//list
-        sidebarObjListFormat('강의관리', '/manager/list/academy_category', 40, ['/manager/list/academy_category']),//list
-        sidebarObjListFormat('강의컨텐츠관리', '/manager/list/academy', 40, ['/manager/list/academy']),//list
-    ], <BsCameraVideo />),
     sidebarContentFormat('기본설정', [
         sidebarObjListFormat('상단띠배너', '/manager/edit/common_setting/1', 40, ['/manager/edit/common_setting/1']),//list
         sidebarObjListFormat('메인배너', '/manager/edit/home_setting/1', 40, ['/manager/edit/home_setting/1']),//list
@@ -35,6 +25,11 @@ export const zSidebar = [
         sidebarObjListFormat('앱등록관리', '/manager/list/app', 40, ['/manager/list/app']),//list
         sidebarObjListFormat('팝업관리', '/manager/list/popup', 40, ['/manager/list/popup']),//list
     ], <AiTwotoneSetting />),
+    sidebarContentFormat('상품관리', [
+        sidebarObjListFormat('전문가관리', '/manager/list/master?level=30', 40, ['/manager/list/master']),//list
+        sidebarObjListFormat('강의관리', '/manager/list/academy_category', 40, ['/manager/list/academy_category']),//list
+        sidebarObjListFormat('강의컨텐츠관리', '/manager/list/academy', 40, ['/manager/list/academy']),//list
+    ], <BsCameraVideo />),
     sidebarContentFormat('게시판관리', [
         sidebarObjListFormat('문의관리', '/manager/list/request', 40, ['/manager/list/request']),//list
         sidebarObjListFormat('FAQ관리', '/manager/list/faq', 40, ['/manager/list/faq']),//list

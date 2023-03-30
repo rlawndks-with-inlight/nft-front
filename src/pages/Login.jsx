@@ -3,10 +3,42 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import avt1 from "../assets/images/author/author1.png";
 import avt2 from "../assets/images/author/author1.png";
+import axios from "axios";
+import { setLocalStorage } from "../functions/LocalStorage";
+import { toast } from "react-hot-toast";
+import $ from "jquery";
 
 Login.propTypes = {};
 
 function Login(props) {
+  const onLogin = async () => {
+    const { data: response } = await axios.post("/api/loginbyid", {
+      id: $(".id").val(),
+      pw: $(".pw").val(),
+    });
+    if (response?.result > 0) {
+      toast.success(response.message);
+    } else {
+      toast.error(response.message);
+    }
+    if (response.result > 0) {
+      let params = {
+        login_type: 0,
+        id: $(".id").val(),
+      };
+      if (window && window.flutter_inappwebview) {
+        await window.flutter_inappwebview
+          .callHandler("native_app_login", JSON.stringify(params))
+          .then(async function (result) {
+            //result = "{'code':100, 'message':'success', 'data':{'login_type':1, 'id': 1000000}}"
+            // JSON.parse(result)
+            let obj = JSON.parse(result);
+          });
+      }
+      await setLocalStorage("auth", JSON.stringify(response.data));
+      window.location.href = "/home";
+    }
+  };
   return (
     <div>
       <section className="tf-page-title style-2">
@@ -76,45 +108,44 @@ function Login(props) {
                 </div>
               </div> */}
 
-              <form action="#" id="contactform">
-                <div className="title-login">계정으로 로그인</div>
-                <fieldset>
-                  <input
-                    id="name"
-                    name="name"
-                    tabindex="1"
-                    aria-required="true"
-                    required=""
-                    type="text"
-                    placeholder="아이디를 입력해 주세요."
-                  />
-                </fieldset>
-                <fieldset className="mb24">
-                  {" "}
-                  <input
-                    id="showpassword"
-                    name="password"
-                    tabindex="2"
-                    aria-required="true"
-                    type="password"
-                    placeholder="비밀번호를 입력해 주세요."
-                    required=""
-                  />
-                  <span className="btn-show-pass ">
-                    <i className="far fa-eye-slash"></i>
-                  </span>
-                </fieldset>
-                <div className="forgot-pass-wrap">
-                  <label>
-                    로그인 기억하기
-                    <input type="checkbox" />
-                    <span className="btn-checkbox"></span>
-                  </label>
-                  <a className="forgot-pass" href="/login">
-                    비밀번호를 잃어버리셨나요?
-                  </a>
-                </div>
-                {/* <div className="title-login">Or login with social</div>
+              <div className="title-login">계정으로 로그인</div>
+              <fieldset>
+                <input
+                  className="id"
+                  tabindex="1"
+                  aria-required="true"
+                  required=""
+                  type="text"
+                  placeholder="아이디를 입력해 주세요."
+                  autoComplete="new-password"
+                />
+              </fieldset>
+              <fieldset className="mb24">
+                {" "}
+                <input
+                  className="pw"
+                  tabindex="2"
+                  aria-required="true"
+                  type="password"
+                  placeholder="비밀번호를 입력해 주세요."
+                  required=""
+                  autoComplete="new-password"
+                />
+                <span className="btn-show-pass ">
+                  <i className="far fa-eye-slash"></i>
+                </span>
+              </fieldset>
+              <div className="forgot-pass-wrap">
+                <label>
+                  로그인 기억하기
+                  <input type="checkbox" />
+                  <span className="btn-checkbox"></span>
+                </label>
+                <a className="forgot-pass" href="/login">
+                  비밀번호를 잃어버리셨나요?
+                </a>
+              </div>
+              {/* <div className="title-login">Or login with social</div>
                 <div className="button-gg">
                   <Link to="#">
                     <i className="fab fa-facebook"></i>Facebook
@@ -125,17 +156,16 @@ function Login(props) {
                     <i className="fab fa-google"></i>Google
                   </Link>
                 </div> */}
-                <button className="submit" type="submit">
-                  로그인
-                </button>
-                <fieldset className="mb24"/>
-                <div className="forgot-pass-wrap">
-                  <label/>
-                  <a className="forgot-pass" href="/signup" >
-                    회원가입하기
-                  </a>
-                </div>
-              </form>
+              <button className="submit" onClick={onLogin}>
+                로그인
+              </button>
+              <fieldset className="mb24" />
+              <div className="forgot-pass-wrap">
+                <label />
+                <a className="forgot-pass" href="/signup">
+                  회원가입하기
+                </a>
+              </div>
             </div>
           </div>
         </div>

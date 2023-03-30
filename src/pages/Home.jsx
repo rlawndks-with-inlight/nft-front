@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import dataCategory from '../assets/fake-data/data-category';
 import TopSeller from '../components/topseller/TopSeller';
@@ -14,18 +14,27 @@ import dataBanner2 from '../assets/fake-data/data-banner-2';
 import Explore2 from '../components/explore/Explore2';
 import dataExplore from '../assets/fake-data/data-explore';
 import Create2 from '../components/create/Create2';
+import axios from 'axios';
+import { toast } from 'react-hot-toast';
 
 Home.propTypes = {
     
 };
 
 function Home(props) {
+    const [posts, setPost] = useState({});
+    useEffect(()=>{
+        getHomeContent();
+    },[])
+    const getHomeContent = async () =>{
+        const {data:response} = await axios.get('/api/gethomecontent');
+        console.log(response);
+    }
     return (
         <div className='home-3'>
 
             <div id="page">
                 <Banner03 data={dataBanner2} />
-
 
                 <Category data={dataCategory} />
 

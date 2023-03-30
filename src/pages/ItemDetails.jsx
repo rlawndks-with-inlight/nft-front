@@ -20,21 +20,21 @@ import avtd5 from "../assets/images/author/author1.png";
 import avtd6 from "../assets/images/author/author1.png";
 import avtd7 from "../assets/images/author/author1.png";
 
-ItemDetails01.propTypes = {};
+ItemDetails.propTypes = {};
 
-function ItemDetails01(props) {
+function ItemDetails(props) {
   const [modalShow, setModalShow] = useState(false);
 
   const [tabDetails] = useState([
     {
       id: 1,
-      heading: "Current Owner",
+      heading: "현재 소유인",
       avt: avtd1,
       name: "Surrogatess",
     },
     {
       id: 2,
-      heading: "Creator",
+      heading: "생성인",
       avt: avtd2,
       name: "Truman Wallaker",
     },
@@ -114,7 +114,7 @@ function ItemDetails01(props) {
   ]);
   return (
     <div>
-      <PageTitle sub="Explore" title="Item Details" />
+      <PageTitle sub="마켓" title="상품상세" />
 
       <section className="tf-item-detail">
         <div className="tf-container">
@@ -157,13 +157,13 @@ function ItemDetails01(props) {
                   <Tabs className="tf-tab">
                     <TabList className="menu-tab ">
                       <Tab className="tab-title active">
-                        <Link to="#">Details</Link>
+                        <Link to="#">자세히</Link>
                       </Tab>
                       <Tab className="tab-title ">
-                        <Link to="#">Bids</Link>
+                        <Link to="#">입찰</Link>
                       </Tab>
                       <Tab className="tab-title ">
-                        <Link to="#">History</Link>
+                        <Link to="#">히스토리</Link>
                       </Tab>
                     </TabList>
 
@@ -184,7 +184,7 @@ function ItemDetails01(props) {
                             </div>
                           ))}
                         </div>
-                        <div className="title-propepties">Properties</div>
+                        <div className="title-propepties">속성</div>
                         <ul className="properties">
                           <li>
                             <Link to="#">
@@ -370,7 +370,7 @@ function ItemDetails01(props) {
           <div className="row">
             <div className="col-md-12">
               <div className="tf-heading">
-                <h4 className="heading">Explore More</h4>
+                <h4 className="heading">상품 더 찾기</h4>
               </div>
             </div>
 
@@ -434,7 +434,7 @@ function ItemDetails01(props) {
                         className="tf-button"
                       >
                         {" "}
-                        Purchase
+                        구매하기
                       </Link>
                     </div>
                   </div>
@@ -450,4 +450,4 @@ function ItemDetails01(props) {
   );
 }
 
-export default ItemDetails01;
+export default ItemDetails;

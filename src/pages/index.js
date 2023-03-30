@@ -18,7 +18,7 @@ import Home from "./Home";
 import Home04 from "./Home04";
 import Home05 from "./Home05";
 import Home06 from "./Home06";
-import ItemDetails01 from "./ItemDetails01";
+import ItemDetails from "./ItemDetails";
 import ItemDetails02 from "./ItemDetails02";
 import LiveAutions01 from "./LiveAutions01";
 import LiveAutions02 from "./LiveAutions02";
@@ -26,10 +26,6 @@ import Login from "./Login";
 import Ranking from "./Ranking";
 import SignUp from "./SignUp";
 import Wallet from "./Wallet";
-import MItemEdit from './Manager/MItemEdit';
-import MItemList from './Manager/MItemList';
-import MLogin from './Manager/MLogin';
-
 
 const routes = [
   { path: '/', component: <Home /> },
@@ -45,7 +41,7 @@ const routes = [
   // { path: '/collection', component: <Collection />},
   // { path: '/live-auctions-v1', component: <LiveAutions01 />},
   // { path: '/live-auctions-v2', component: <LiveAutions02 />},
-  { path: '/item-details-v1', component: <ItemDetails01 /> },
+  { path: '/item-details', component: <ItemDetails /> },
   { path: '/item-details-v2', component: <ItemDetails02 /> },
   { path: '/dashboard', component: <Dashboard /> },
   { path: '/ranking', component: <Ranking /> },
@@ -62,13 +58,7 @@ const routes = [
   { path: '/contact', component: <Contact /> },
 
 ]
-const zManagerRoute = [
-  { path: '/manager', component: <MLogin />, title: "관리자로그인", non_layout: true },
-  { path: '/manager/login', component: <MLogin />, title: "관리자로그인", non_layout: true },
-  { path: '/manager/edit/:table/:pk', component: <MItemEdit />, title: "" },
-  { path: '/manager/list/:table/:pk', component: <MItemList />, title: "" },
-  { path: '/manager/list/:table', component: <MItemList />, title: "" },
-];
+
 export {
-  routes, zManagerRoute
+  routes,
 };

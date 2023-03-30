@@ -75,11 +75,11 @@ const MItemEditComponent = (props) => {
         if (breadcrumb) {
             setBreadcrumbText(breadcrumb);
         } else {
-            setBreadcrumbText(objManagerEditContent[schema].breadcrumb + ' ' + `${params_pk > 0 ? '수정' : '추가'}`);
+            setBreadcrumbText(objManagerEditContent[schema]?.breadcrumb + ' ' + `${params_pk > 0 ? '수정' : '추가'}`);
         }
-        for (var i = 0; i < objManagerEditContent[schema].columns.length; i++) {
-            for (var j = 0; j < objManagerEditContent[schema].columns[i].length; j++) {
-                let content = objManagerEditContent[schema].columns[i][j];
+        for (var i = 0; i < objManagerEditContent[schema]?.columns.length; i++) {
+            for (var j = 0; j < objManagerEditContent[schema]?.columns[i].length; j++) {
+                let content = objManagerEditContent[schema]?.columns[i][j];
                 if (content.type == 'select') {
                     if (content?.type_option?.api_url) {
                         const { data: response } = await axios.get(content?.type_option?.api_url);
@@ -286,7 +286,7 @@ const MItemEditComponent = (props) => {
                     </>
                     :
                     <>
-                        {objManagerEditContent[schema].columns.map((cols, index) => (
+                        {objManagerEditContent[schema] && objManagerEditContent[schema].columns && objManagerEditContent[schema].columns.map((cols, index) => (
                             <>
                                 <Row>
                                     {cols.map((item, idx) => (

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import PageTitle from "../components/pagetitle/PageTitle";
 
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import icon1 from "../assets/images/svg/metamask.svg";
 import icon2 from "../assets/images/svg/coinbase.svg";
 import icon3 from "../assets/images/svg/torus.svg";
@@ -15,10 +15,30 @@ import ico1 from "../assets/images/icon/rain1.svg";
 import ico2 from "../assets/images/icon/rain2.svg";
 import ico3 from "../assets/images/icon/ethe.svg";
 import avt from "../assets/images/author/author1.png";
+import axios from "axios";
+import { useEffect } from "react";
+import { toast } from "react-hot-toast";
 
 Create.propTypes = {};
 
 function Create(props) {
+  const navigate = useNavigate();
+  useEffect(() => {
+    async function isAdmin() {
+      const { data: response } = await axios.get("/api/getmyinfo");
+      if (response?.data?.pk > 0) {
+        await localStorage.setItem("auth", JSON.stringify(response?.data));
+        let obj = response?.data;
+      } else {
+        toast.error("로그인을 해주세요.")
+        localStorage.removeItem("auth");
+        navigate('/login');
+      }
+    }
+    isAdmin();
+    if (window && window.flutter_inappwebview) {
+    }
+  }, []);
   return (
     <div>
       <PageTitle none="none" title="생성하기" />

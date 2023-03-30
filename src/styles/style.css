@@ -1,3 +1,32 @@
+:root{
+    --background1:#3250D2;
+    --background2:#FFDC00;
+}
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-active{
+    color: var(--background2) !important;
+}
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed{
+    color: var(--background1) !important;
+}
+.css-jedpe8-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input{
+    font-size: 15px !important;
+}
+.swal2-title {
+    font-size: 17px !important;
+}
+.swal2-styled.swal2-confirm{
+    background: var(--background1) !important;
+}
+.swal2-styled.swal2-cancel{
+    outline: none;
+}
+.swal2-popup .swal2-styled{
+    cursor: pointer;
+}
+.swal2-popup .swal2-styled:focus {
+    box-shadow: none !important;
+
+}
 body {
     -ms-overflow-style: none;
     /* IE and Edge */
@@ -12,7 +41,7 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-thumb {
     /* Chrome, Safari, Opera*/
-    background: #eef1fd;
+    background: #3250D255;
 }
 .ql-editor{
     -ms-overflow-style: none;
@@ -64,7 +93,7 @@ body::-webkit-scrollbar-thumb {
 }
 .scroll-table::-webkit-scrollbar-thumb {
     /* Chrome, Safari, Opera*/
-    background: #FECC2F55;
+    background: #3250D255;
 }
 .scroll-table-green::-webkit-scrollbar{
     display: none;
@@ -72,7 +101,7 @@ body::-webkit-scrollbar-thumb {
 }
 .scroll-table-green::-webkit-scrollbar-thumb {
     /* Chrome, Safari, Opera*/
-    background: rgba(103, 172, 91);
+    background: #3250D255;
     position: fixed;
     bottom: 0;
 }
@@ -83,7 +112,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .scroll-css::-webkit-scrollbar-thumb {
-    background-color: #FECC2F;
+    background-color: #3250D255;
 }
 
 .scroll-css::-webkit-scrollbar-track {

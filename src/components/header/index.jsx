@@ -9,6 +9,7 @@ import logo from "../../assets/images/logo/logo.png";
 import logodark from "../../assets/images/logo/logo_dark.png";
 
 import DarkMode from "./DarkMode";
+import { getLocalStorage } from "../../functions/LocalStorage";
 
 // import Button from '../button';
 
@@ -56,7 +57,7 @@ const Header = () => {
                       className="logo-light"
                       src={logo}
                       alt="Binasea"
-                      style={{ height: "46px"}}
+                      style={{ height: "46px" }}
                     />
                   </Link>
                 </div>
@@ -100,8 +101,13 @@ const Header = () => {
                 </Link>
                 <span
                   className="user "
-                  onClick={() => {
-                    navigate("/login");
+                  onClick={async () => {
+                    let user_auth = await getLocalStorage("auth");
+                    if (user_auth?.id) {
+                      navigate("/dashboard");
+                    } else {
+                      navigate("/login");
+                    }
                   }}
                   style={{ cursor: "pointer" }}
                 >
