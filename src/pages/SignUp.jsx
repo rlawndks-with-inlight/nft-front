@@ -20,6 +20,7 @@ function SignUp(props) {
       phone: $(".phone").val(),
       address: $(".address").val(),
       address_detail: $(".address_detail").val(),
+      parent_id: $(".parent_id").val(),
       //zip_code: $(".zip_code").val(),
     };
     let keys = Object.keys(obj);
@@ -167,6 +168,16 @@ function SignUp(props) {
                   type="text"
                   placeholder="상세주소를 입력해 주세요."
                   className="address_detail"
+                  autoComplete="new-password"
+                />
+              </fieldset>
+              <fieldset>
+                <input
+                  aria-required="true"
+                  required=""
+                  type="text"
+                  placeholder="추천인아이디를 입력해 주세요."
+                  className="parent_id"
                   autoComplete="new-password"
                 />
               </fieldset>
