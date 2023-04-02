@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import dataCategory from "../assets/fake-data/data-category";
 import TopSeller from "../components/topseller/TopSeller";
 import dataSeller from "../assets/fake-data/data-topseller";
-
 import dataCollection from "../assets/fake-data/data-collection";
 import Banner03 from "../components/banner/Banner03";
 import LiveAutions3 from "../components/liveautions/LiveAutions3";
@@ -50,7 +49,6 @@ function Home(props) {
         }
       }
     }
-    console.log(obj);
     setPost(obj);
   };
   return (

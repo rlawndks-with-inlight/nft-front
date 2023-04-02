@@ -9,38 +9,32 @@ import img5 from '../images/product/product7.png'
 const dataBanner2 = [
     {
         id: 1,
-        
         heading: 'NFT를 수집 및 판매합니다.',
         desc: 'NOWNFT에서 원하는 NFT를 찾아보세요.',
-        img: img1,
     },
     {
         id: 2,
         
         heading: 'NFT를 수집 및 판매합니다.',
         desc: 'NOWNFT에서 원하는 NFT를 찾아보세요.',
-        img: img2,
     },
     {
         id: 3,
         
         heading: 'NFT를 수집 및 판매합니다.',
         desc: 'NOWNFT에서 원하는 NFT를 찾아보세요.',
-        img: img3,
     },
     {
         id: 4,
         
         heading: 'NFT를 수집 및 판매합니다.',
         desc: 'NOWNFT에서 원하는 NFT를 찾아보세요.',
-        img: img4,
     },
     {
         id: 5,
         
         heading: 'NFT를 수집 및 판매합니다.',
         desc: 'NOWNFT에서 원하는 NFT를 찾아보세요.',
-        img: img5,
     },
     
 
