@@ -64,7 +64,7 @@ function Home(props) {
 
         <Explore2 data={dataExplore} />
 
-        <Collection data={dataCollection} />
+        {/* <Collection data={dataCollection} /> */}
 
         <Create2 data={post?.bottom ?? []} />
       </div>

@@ -22,6 +22,7 @@ import { backUrl, defaultImageSrc } from "../data/Data";
 import $ from "jquery";
 import { commarNumber } from "../functions/utils";
 import theme from "../styles/theme";
+import Swal from "sweetalert2";
 Create.propTypes = {};
 
 function Create(props) {
@@ -30,16 +31,20 @@ function Create(props) {
   const [auth, setAuth] = useState({});
   const [wallets, setWallets] = useState([]);
   const [properties, setProperties] = useState([]);
-  const [values, setValues] = useState({
-    wallet_pk: undefined,
+  const [categories, setCategories] = useState([]);
+  const defaultObj = {
+    wallet: {},
+    category_pk: undefined,
     img: {
       content: undefined,
       url: "",
     },
     name: "",
     price: "",
+    note: "",
     property_list: [],
-  });
+  };
+  const [values, setValues] = useState(defaultObj);
   useEffect(() => {
     async function isAdmin() {
       const { data: response } = await axios.get("/api/getmyinfo");
@@ -64,11 +69,41 @@ function Create(props) {
     const { data: response2 } = await axios.get(
       `/api/items?table=item_property`
     );
-    console.log(response2);
     setProperties(response2?.data);
+    const { data: response3 } = await axios.get(
+      `/api/items?table=item_category`
+    );
+    setCategories(response3?.data);
   };
   const onCreate = async () => {
-    const { data: response } = await axios.post("/api/additembyuser");
+    Swal.fire({
+      title: `상품을 생성 하시겠습니까?`,
+      showCancelButton: true,
+      confirmButtonText: "확인",
+      cancelButtonText: "취소",
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        let formData = new FormData();
+        formData.append("table", "item");
+        formData.append("content", values.img.content);
+        formData.append("category_pk", values.category_pk);
+        formData.append("wallet_pk", values.wallet?.pk);
+        formData.append("name", values.name);
+        formData.append("price", parseInt(values.price));
+        formData.append("note", values.note);
+        formData.append("property_list", JSON.stringify(values.property_list));
+        const { data: response } = await axios.post(
+          "/api/additembyuser",
+          formData
+        );
+        if (response?.result > 0) {
+          toast.success("성공적으로 저장 되었습니다.");
+          navigate("/explore");
+        } else {
+          toast.error(response?.message);
+        }
+      }
+    });
   };
   const onChangeValues = (event) => {
     let { name, value, files } = event.target;
@@ -87,10 +122,19 @@ function Create(props) {
     }
   };
 
-  const onClickWallet = (pk) => {
-    setValues({ ...values, wallet_pk: pk });
+  const onClickWallet = (item) => {
+    setValues({ ...values, wallet: item });
   };
-  const onClickProperties = () => {};
+  const onClickProperties = (pk) => {
+    let property_list = [...values.property_list];
+    if (property_list.includes(pk)) {
+      let find_index = property_list.findIndex((e) => e == pk);
+      property_list.splice(find_index, 1);
+    } else {
+      property_list.push(pk);
+    }
+    setValues({ ...values, ["property_list"]: property_list });
+  };
   return (
     <div>
       <PageTitle none="none" title="생성하기" />
@@ -107,11 +151,11 @@ function Create(props) {
                       <>
                         <li
                           onClick={() => {
-                            onClickWallet(item?.pk);
+                            onClickWallet(item);
                           }}
                           style={{
                             background: `${
-                              values.wallet_pk == item?.pk
+                              values.wallet?.pk == item?.pk
                                 ? theme.color.background1
                                 : ""
                             }`,
@@ -129,6 +173,41 @@ function Create(props) {
                       </>
                     ))}
                 </ul>
+                <fieldset className="propertise">
+                  <label className="mb8">카테고리 선택</label>
+                  <p className="sub">카테고리를 선택해 주세요. (단일 선택)</p>
+                  <ul
+                    className="propertise-list"
+                    style={{ display: "flex", flexWrap: "wrap" }}
+                  >
+                    {categories &&
+                      categories.map((item, idx) => (
+                        <>
+                          <li
+                            onClick={() =>
+                              setValues({
+                                ...values,
+                                ["category_pk"]: item?.pk,
+                              })
+                            }
+                          >
+                            <Link
+                              to="#"
+                              style={{
+                                background: `${
+                                  values.category_pk == item?.pk
+                                    ? theme.color.background1
+                                    : ""
+                                }`,
+                              }}
+                            >
+                              {item.name}
+                            </Link>
+                          </li>
+                        </>
+                      ))}
+                  </ul>
+                </fieldset>
                 <Tabs className="tf-tab">
                   <TabPanel>
                     <div className="tab-create-item">
@@ -173,6 +252,7 @@ function Create(props) {
                           type="text"
                           name="name"
                           onChange={onChangeValues}
+                          value={values.name}
                           placeholder="교환 가능한 로고 티셔츠"
                         />
                       </fieldset>
@@ -180,8 +260,10 @@ function Create(props) {
                       <fieldset>
                         <label>간단한 설명을 입력하세요.</label>
                         <textarea
-                          id="message"
-                          name="message"
+                          id="note"
+                          name="note"
+                          onChange={onChangeValues}
+                          value={values.note}
                           rows="4"
                           tabindex="4"
                           aria-required="true"
@@ -191,7 +273,9 @@ function Create(props) {
 
                       <fieldset className="propertise">
                         <label className="mb8">속성 선택</label>
-                        <p className="sub">사용할 속성을 선택해 주세요.</p>
+                        <p className="sub">
+                          사용할 속성을 선택해 주세요. (다중 선택)
+                        </p>
                         <ul
                           className="propertise-list"
                           style={{ display: "flex", flexWrap: "wrap" }}
@@ -199,8 +283,19 @@ function Create(props) {
                           {properties &&
                             properties.map((item, idx) => (
                               <>
-                                <li>
-                                  <Link to="#">{item.name}</Link>
+                                <li onClick={() => onClickProperties(item?.pk)}>
+                                  <Link
+                                    to="#"
+                                    style={{
+                                      background: `${
+                                        values.property_list.includes(item?.pk)
+                                          ? theme.color.background1
+                                          : ""
+                                      }`,
+                                    }}
+                                  >
+                                    {item.name}
+                                  </Link>
                                 </li>
                               </>
                             ))}
@@ -211,9 +306,10 @@ function Create(props) {
                           <label className="mb8">시작 입찰가</label>
                           <input
                             type="text"
-                            placeholder="E.G. 0,01 Eth"
+                            placeholder="숫자를 입력해 주세요."
                             name="price"
                             onChange={onChangeValues}
+                            value={values.price}
                           />
                         </fieldset>
                         {/* <fieldset>
@@ -276,10 +372,18 @@ function Create(props) {
                       </ul> */}
 
                       <div className="bottom-button">
-                        <Link to="#" className="tf-button active">
+                        <Link
+                          to="#"
+                          className="tf-button active"
+                          onClick={onCreate}
+                        >
                           생성하기
                         </Link>
-                        <Link to="#" className="tf-button">
+                        <Link
+                          to="#"
+                          className="tf-button"
+                          onClick={() => setValues(defaultObj)}
+                        >
                           모두 삭제
                         </Link>
                       </div>
@@ -326,10 +430,19 @@ function Create(props) {
                       <div className="subtitle">현재 입찰가</div>
                       <div className="price">
                         <span className="cash">
-                          {commarNumber(values.price)} ETH
+                          {commarNumber(values.price)}{" "}
+                          {values.wallet?.unit ?? "원"}
                         </span>
                         <span className="icon">
-                          <img src={ico3} alt="images" />
+                          <img
+                            src={
+                              values.wallet?.img_src
+                                ? backUrl + values.wallet?.img_src
+                                : ico3
+                            }
+                            alt="images"
+                            style={{ width: "16px" }}
+                          />
                         </span>
                       </div>
                     </div>

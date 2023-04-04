@@ -9,6 +9,10 @@ import icon1 from "../../assets/images/icon/rain1.svg";
 import icon2 from "../../assets/images/icon/rain2.svg";
 import icon3 from "../../assets/images/icon/ethe.svg";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import axios from "axios";
+import { backUrl, logoSrc, onlyLogoSrc } from "../../data/Data";
+import { commarNumber } from "../../functions/utils";
 
 HotPick.propTypes = {
   data: PropTypes.array,
@@ -17,45 +21,28 @@ HotPick.propTypes = {
 function HotPick(props) {
   const [modalShow, setModalShow] = useState(false);
   const { data } = props;
+  const [dataTab, setDataTab] = useState([]);
+  const [items, setItems] = useState([]);
+  const [wallets, setWallets] = useState([]);
+  useEffect(() => {
+    getCategories();
+  }, []);
 
-  const [dataTab] = useState([
-    {
-      id: 1,
-      title: "3D 모델",
-      item: 0,
-    },
-    {
-      id: 2,
-      title: "애니/만화",
-      item: 4,
-    },
-    {
-      id: 3,
-      title: "사이버 펑크",
-      item: 5,
-    },
-    {
-      id: 4,
-      title: "픽셀아트",
-      item: 1,
-    },
-    {
-      id: 5,
-      title: "음악",
-      item: 3,
-    },
-    {
-      id: 6,
-      title: "추상적인",
-      item: 7,
-    },
-    {
-      id: 7,
-      title: "2D 작품",
-      item: 3,
-    },
-  ]);
+  const getCategories = async () => {
+    const { data: response } = await axios.get(
+      `/api/items?table=item_category&status=1`
+    );
+    setDataTab(response?.data);
+    getItems(response?.data[0]?.pk);
+  };
 
+  const getItems = async (category_pk) => {
+    const { data: response } = await axios.get(
+      `/api/items?table=item&status=1&category_pk=${category_pk}`
+    );
+    console.log(response);
+    setItems(response?.data);
+  };
   return (
     <section className="tf-section tf-hot-pick tf-filter">
       <div className="tf-container">
@@ -69,8 +56,15 @@ function HotPick(props) {
             <Tabs>
               <div className="d-flex justify-content-between mb-wr">
                 <TabList>
-                  {dataTab.map((idx) => (
-                    <Tab key={idx.id}>{idx.title}</Tab>
+                  {dataTab.map((item) => (
+                    <Tab
+                      key={item.pk}
+                      onClick={() => {
+                        getItems(item?.pk);
+                      }}
+                    >
+                      {item.name}
+                    </Tab>
                   ))}
                 </TabList>
                 <Dropdown>
@@ -98,77 +92,82 @@ function HotPick(props) {
                 </Dropdown>
               </div>
 
-              {dataTab.map((idx) => (
-                <TabPanel key={idx.id}>
-                  <div className="row tf-filter-container wow fadeInUp">
-                    {data.slice(idx.item, 12).map((idx) => (
-                      <div
-                        key={idx.id}
-                        className="col-xl-3 col-lg-4 col-md-6 col-sm-6 tf-loadmore 3d cyber"
-                      >
-                        <div className="sc-product style2">
-                          <div className="top">
-                            <Link to="/item-details" className="tag">
-                              {idx.title}
-                            </Link>
-                            <div className="wish-list">
-                              <Link to="#" className="heart-icon"></Link>
-                            </div>
+              <div className="row tf-filter-container wow fadeInUp">
+                {items &&
+                  items.map((item, idx) => (
+                    <div
+                      key={idx}
+                      className="col-xl-3 col-lg-4 col-md-6 col-sm-6 tf-loadmore 3d cyber"
+                    >
+                      <div className="sc-product style2">
+                        <div className="top">
+                          <Link to="/item-details" className="tag">
+                            {item.name} #{item?.pk}
+                          </Link>
+                          <div className="wish-list">
+                            <Link to="#" className="heart-icon"></Link>
                           </div>
-                          <div className="bottom">
-                            <div className="details-product">
-                              <div className="author">
-                                <div className="avatar">
-                                  <img src={idx.avt} alt="images" />
-                                </div>
-                                <div className="content">
-                                  <div className="position">작성자</div>
-                                  <div className="name">
-                                    {" "}
-                                    <Link to="#">{idx.create}</Link>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="features">
-                            <div className="product-media">
-                              <img src={idx.img} alt="images" />
-                            </div>
-                            <div className="rain-drop1">
-                              <img src={icon1} alt="images" />
-                            </div>
-                            <div className="rain-drop2">
-                              <img src={icon2} alt="images" />
-                            </div>
-                          </div>
-                          <div className="bottom-style2">
-                            <div className="price">
-                              <div className="icon">
-                                <img src={icon3} alt="images" />
+                        </div>
+                        <div className="bottom">
+                          <div className="details-product">
+                            <div className="author">
+                              <div className="avatar">
+                                <img
+                                  src={
+                                    item.user_profile_img
+                                      ? backUrl + item.user_profile_img
+                                      : onlyLogoSrc
+                                  }
+                                  alt="images"
+                                />
                               </div>
                               <div className="content">
-                                <div className="name">ETH</div>
-                                <div className="cash">{idx.price}</div>
+                                <div className="position">작성자</div>
+                                <div className="name">
+                                  {" "}
+                                  <Link to="#">{item.nickname}</Link>
+                                </div>
                               </div>
-                            </div>
-                            <div className="product-button">
-                              <Link
-                                to=""
-                                onClick={() => setModalShow(true)}
-                                className="tf-button"
-                              >
-                                {" "}
-                                구매하기
-                              </Link>
                             </div>
                           </div>
                         </div>
+                        <div className="features">
+                          <div className="product-media">
+                            <img
+                              src={
+                                item.img_src
+                                  ? backUrl + item?.img_src
+                                  : onlyLogoSrc
+                              }
+                              alt="images"
+                            />
+                          </div>
+                        </div>
+                        <div className="bottom-style2">
+                          <div className="price">
+                            <div className="icon">
+                              <img src={backUrl + item.wallet_img} alt="images" />
+                            </div>
+                            <div className="content">
+                              <div className="name">{item.wallet_unit}</div>
+                              <div className="cash">{commarNumber(item.price)}</div>
+                            </div>
+                          </div>
+                          <div className="product-button">
+                            <Link
+                              to=""
+                              onClick={() => setModalShow(true)}
+                              className="tf-button"
+                            >
+                              {" "}
+                              구매하기
+                            </Link>
+                          </div>
+                        </div>
                       </div>
-                    ))}
-                  </div>
-                </TabPanel>
-              ))}
+                    </div>
+                  ))}
+              </div>
             </Tabs>
           </div>
         </div>

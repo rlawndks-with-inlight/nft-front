@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import logo from '../assets/images/logo/logo.png'
+import only_logo from '../assets/images/logo/only_logo.png'
 import defaultImage from '../assets/images/test/default-image.png'
 import { EditorState } from "draft-js"
 import theme from '../styles/theme';
@@ -13,6 +14,7 @@ export const backUrl = "https://purplevery19.cafe24.com:8443";
 //export const backUrl = "https://1st-academy.kr:8443";
 
 export const logoSrc = logo;
+export const onlyLogoSrc = only_logo;
 export const defaultImageSrc = defaultImage;
 //http://weare-first.com:8001
 export const editorState = {
