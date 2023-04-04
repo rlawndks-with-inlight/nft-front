@@ -18,7 +18,6 @@ Category.propTypes = {
 
 function Category(props) {
   const { data } = props;
-  console.log(data)
   return (
     <section className="tf-section tf-category">
       <div className="tf-container">

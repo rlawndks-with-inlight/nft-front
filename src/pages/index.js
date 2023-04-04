@@ -42,7 +42,7 @@ const routes = [
   // { path: '/live-auctions-v1', component: <LiveAutions01 />},
   // { path: '/live-auctions-v2', component: <LiveAutions02 />},
   { path: '/item-details', component: <ItemDetails /> },
-  { path: '/item-details-v2', component: <ItemDetails02 /> },
+  { path: '/item-details-v2/:pk', component: <ItemDetails02 /> },
   { path: '/dashboard', component: <Dashboard /> },
   { path: '/ranking', component: <Ranking /> },
   { path: '/help-center', component: <HelpCenter /> },
@@ -51,12 +51,12 @@ const routes = [
   { path: '/login', component: <Login /> },
   { path: '/signup', component: <SignUp /> },
   { path: '/create', component: <Create /> },
+  //{ path: '/edit', component: <Create /> },
   // { path: '/blog-v1', component: <Blog01 />},
   { path: '/blog', component: <Blog /> },
   { path: '/blog-details-v1', component: <BlogDetails01 /> },
   { path: '/blog-details-v2', component: <BlogDetails02 /> },
   { path: '/contact', component: <Contact /> },
-
 ]
 
 export {

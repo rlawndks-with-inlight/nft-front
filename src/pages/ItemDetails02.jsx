@@ -132,7 +132,7 @@ function ItemDetails02(props) {
                         <div className="col-md-12">
                             <div className="tf-item-detail-inner style-2">
                                 <div className="image">
-                                    <img src={img1} alt="Binasea" style={{maxWidth:'700px'}} />
+                                    <img src={img1} alt="Binasea" style={{maxWidth:'700px', width:'100%'}} />
                                 </div>
                                 <div className="content">
                                     <div className="content-top">

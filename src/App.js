@@ -30,7 +30,7 @@ function App() {
                 }
                 <Route path='*' element={<Page404 />} />
             </Routes>
-            <Toaster position={'top-right'} containerStyle={{ zIndex: 999 }} />
+            <Toaster position={'top-right'} containerStyle={{ zIndex: 999, top: '100px' }} />
             <Footer />
         </>
     );

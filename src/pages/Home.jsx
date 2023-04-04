@@ -16,17 +16,19 @@ import Create2 from "../components/create/Create2";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import { backUrl } from "../data/Data";
-
+import HotPick from "../components/hotpick/HotPick";
+import Loading from "../components/Loading";
 Home.propTypes = {};
 
 function Home(props) {
   const [post, setPost] = useState({});
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     getHomeContent();
   }, []);
   const getHomeContent = async () => {
+    setLoading(true);
     const { data: response } = await axios.get("/api/gethomecontent");
-    console.log(response);
     let obj = response?.data;
     if (obj["setting"]) {
       let setting_keys = Object.keys(obj["setting"]);
@@ -50,23 +52,30 @@ function Home(props) {
       }
     }
     setPost(obj);
+    setLoading(false);
   };
   return (
     <div className="home-3">
       <div id="page">
-        <Banner03 data={post?.banner ?? []} />
+        {loading ? (
+          <>
+            <Loading />
+          </>
+        ) : (
+          <>
+            <Banner03 data={post?.banner ?? []} />
 
-        <Category data={post?.item_category??[]} />
+            <Category data={post?.item_category ?? []} />
 
-        <LiveAutions3 data={dataLiveaution} />
+            {/* <LiveAutions3 data={dataLiveaution} />
 
-        <TopSeller data={dataSeller} />
+            <TopSeller data={dataSeller} /> */}
 
-        <Explore2 data={dataExplore} />
-
-        {/* <Collection data={dataCollection} /> */}
-
-        <Create2 data={post?.bottom ?? []} />
+            <HotPick category_list={post?.item_category} is_limit={true} />
+            {/* <Collection data={dataCollection} /> */}
+            <Create2 data={post?.bottom ?? []} />
+          </>
+        )}
       </div>
     </div>
   );

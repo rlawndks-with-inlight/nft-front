@@ -12,7 +12,6 @@ function Explore(props) {
     return (
         <div className='page-explore'>
             <PageTitle none='none'  title='마켓' />
-
             <HotPick data={dataHotpick} />
             
         </div>

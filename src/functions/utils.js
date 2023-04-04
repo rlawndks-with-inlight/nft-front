@@ -1,7 +1,6 @@
 import axios from 'axios';
 import * as FileSaver from "file-saver";
 import * as XLSX from "xlsx";
-import { returnColumn } from '../common/manager/ColumnType';
 
 // 웹뷰에서 RN으로 데이터를 보낼때 사용합니다.
 export function sendToRN(num) {
@@ -54,23 +53,37 @@ export const deleteItem = async (type, obj) => {
 
 }
 export const commarNumber = (num) => {
-    let str = "";
-    if (typeof num == "number") {
-        str = num.toString();
-    } else {
-        str = num;
+    if(num > 0 && num < 0.000001){
+        return "0.00";
     }
-    if (!str) {
-        return "---";
+    if (!num && num != 0) {
+        return undefined;
+    }
+    let str = "";
+    if (typeof num == "string") {
+        str = num;
+    } else {
+        str = num.toString();
+    }
+
+    let decimal = "";
+    if (str.includes(".")) {
+        decimal = "." + str.split(".")[1].substring(0, 2);
+        str = str.split(".")[0];
+    } else {
+        decimal = "";
+    }
+    if (str?.length <= 3) {
+        return str + decimal;
     }
     let result = "";
     let count = 0;
-    for (var i = str.length - 1; i >= 0; i--) {
-        if (count % 3 == 0 && count != 0) result = "," + result;
+    for (var i = str?.length - 1; i >= 0; i--) {
+        if (count % 3 == 0 && count != 0 && !isNaN(parseInt(str[i]))) result = "," + result;
         result = str[i] + result;
         count++;
     }
-    return result;
+    return result + decimal;
 }
 export const formatPhoneNumber = (input) => {
     const cleanInput = String(input).replaceAll(/[^0-9]/g, "");
@@ -253,53 +266,7 @@ export const getViewerAlignByNumber = (num) => {
         return "center";
     }
 }
-export const excelDownload = async (excelData, objManagerListContent, schema) => {
-    const excelFileType = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=UTF-8';
-    const excelFileExtension = '.xlsx';
-    const excelFileName = schema;
-    let ignore_name_list = ['맨위로', '수정', '삭제', '관리'];
-    let name_list = [];
-    let column_list = [];
-    for (var i = 0; i < objManagerListContent[schema].zColumn.length; i++) {
-        if (!ignore_name_list.includes(objManagerListContent[schema].zColumn[i].name)) {
-            name_list.push(objManagerListContent[schema].zColumn[i].name)
-            column_list.push(objManagerListContent[schema].zColumn[i])
-        }
-    }
-    const ws = XLSX.utils.aoa_to_sheet([
-        ['퍼스트 아카데미']
-        , []
-        , name_list
-    ]);
 
-    let result = [...excelData];
-    let excel_list = [];
-    for (var i = 0; i < result.length; i++) {
-        excel_list[i] = [];
-        for (var j = 0; j < column_list.length; j++) {
-            let data = await returnColumn(result[i], column_list[j]?.type, column_list[j]?.column, objManagerListContent[schema].schema);;
-            await excel_list[i].push(data);
-        }
-    }
-    await excel_list.map(async (data, idx) => {
-        XLSX.utils.sheet_add_aoa(
-            ws,
-            [
-                data
-            ],
-            { origin: -1 }
-        );
-        ws['!cols'] = [
-            { wpx: 50 },
-            { wpx: 50 }
-        ]
-        return false;
-    });
-    const wb = { Sheets: { data: ws }, SheetNames: ['data'] };
-    const excelButter = XLSX.write(wb, { bookType: 'xlsx', type: 'array' });
-    const excelFile = new Blob([excelButter], { type: excelFileType });
-    FileSaver.saveAs(excelFile, excelFileName + excelFileExtension);
-}
 export const dateFormat = (date, is_minus) => {//두날짜의 시간차
     if (!date) {
         return "---";

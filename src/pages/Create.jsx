@@ -42,6 +42,7 @@ function Create(props) {
     name: "",
     price: "",
     note: "",
+    end_date: "",
     property_list: [],
   };
   const [values, setValues] = useState(defaultObj);
@@ -76,6 +77,18 @@ function Create(props) {
     setCategories(response3?.data);
   };
   const onCreate = async () => {
+    if(
+      !values.wallet?.pk || 
+      !values.category_pk ||
+      !values.img.content ||
+      !values.name ||
+      !values.price ||
+      !values.note ||
+      !values.end_date
+    ){
+      toast.error('필수값을 입력해 주세요.');
+      return;
+    }
     Swal.fire({
       title: `상품을 생성 하시겠습니까?`,
       showCancelButton: true,
@@ -91,13 +104,14 @@ function Create(props) {
         formData.append("name", values.name);
         formData.append("price", parseInt(values.price));
         formData.append("note", values.note);
+        formData.append("end_date", values.end_date);
         formData.append("property_list", JSON.stringify(values.property_list));
         const { data: response } = await axios.post(
           "/api/additembyuser",
           formData
         );
         if (response?.result > 0) {
-          toast.success("성공적으로 저장 되었습니다.");
+          toast.success("성공적으로 저장 되었습니다. \n심사 후 등록됩니다.");
           navigate("/explore");
         } else {
           toast.error(response?.message);
@@ -319,6 +333,24 @@ function Create(props) {
                           <input type="text" placeholder="E.G. 0,01 Eth" />
                         </fieldset> */}
                       </div>
+                      <div className="set-item">
+                        <fieldset>
+                          <label className="mb8">경매 마감일</label>
+                          <input
+                            type="date"
+                            placeholder="숫자를 입력해 주세요."
+                            name="end_date"
+                            onChange={onChangeValues}
+                            value={values.end_date}
+                          />
+                        </fieldset>
+                        {/* <fieldset>
+                          <label className="mb8">
+                            Select royalties amount, %
+                          </label>
+                          <input type="text" placeholder="E.G. 0,01 Eth" />
+                        </fieldset> */}
+                      </div>
                       {/* <ul className="collection-list">
                         <li>
                           <div className="list">
@@ -407,7 +439,7 @@ function Create(props) {
                 <div className="features">
                   <div className="product-media">
                     <img
-                      src={values.img.url ? values.img.url : img}
+                      src={values.img.url ? values.img.url : defaultImageSrc}
                       alt="images"
                     />
                   </div>
@@ -416,7 +448,14 @@ function Create(props) {
                   <div className="details-product">
                     <div className="author">
                       <div className="avatar">
-                        <img src={avt} alt="images" />
+                        <img
+                          src={
+                            auth?.profile_img
+                              ? backUrl + auth?.profile_img
+                              : defaultImageSrc
+                          }
+                          alt="images"
+                        />
                       </div>
                       <div className="content">
                         <div className="position">작성자</div>
@@ -431,18 +470,20 @@ function Create(props) {
                       <div className="price">
                         <span className="cash">
                           {commarNumber(values.price)}{" "}
-                          {values.wallet?.unit ?? "원"}
+                          {values.wallet?.unit ?? "---"}
                         </span>
                         <span className="icon">
-                          <img
-                            src={
-                              values.wallet?.img_src
-                                ? backUrl + values.wallet?.img_src
-                                : ico3
-                            }
-                            alt="images"
-                            style={{ width: "16px" }}
-                          />
+                          {values.wallet?.img_src ? (
+                            <>
+                              <img
+                                src={backUrl + values.wallet?.img_src}
+                                alt="images"
+                                style={{ width: "16px" }}
+                              />
+                            </>
+                          ) : (
+                            <></>
+                          )}
                         </span>
                       </div>
                     </div>
