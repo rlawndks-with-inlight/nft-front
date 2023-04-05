@@ -22,7 +22,11 @@ import avtd7 from "../assets/images/author/author1.png";
 import { useEffect } from "react";
 import { toast } from "react-hot-toast";
 import axios from "axios";
-import { commarNumber, makeQueryObj } from "../functions/utils";
+import {
+  commarNumber,
+  getItemTypeByNum,
+  makeQueryObj,
+} from "../functions/utils";
 import { backUrl, defaultImageSrc, onlyLogoSrc } from "../data/Data";
 import theme from "../styles/theme";
 import Loading from "../components/Loading";
@@ -170,10 +174,29 @@ function ItemDetails(props) {
                       <h2 className="title-detail">
                         {item?.name} #{item?.pk}
                       </h2>
-                      <p className="except" style={{ whiteSpace: "pre" }}>
-                        마감일: {item?.end_date}
+                      <p
+                        className="except"
+                        style={{ whiteSpace: "pre", margin: "0 auto" }}
+                      >
+                        판매타입: {getItemTypeByNum(item?.type)}
                       </p>
-                      <p className="except" style={{ whiteSpace: "pre" }}>
+                      {item?.type == 1 ? (
+                        <>
+                          <p
+                            className="except"
+                            style={{ whiteSpace: "pre", margin: "0 auto" }}
+                          >
+                            마감일: {item?.end_date}
+                          </p>
+                        </>
+                      ) : (
+                        <></>
+                      )}
+
+                      <p
+                        className="except"
+                        style={{ whiteSpace: "pre", margin: "1rem auto" }}
+                      >
                         {item?.note}
                       </p>
 
@@ -287,7 +310,9 @@ function ItemDetails(props) {
 
                       <div className="content-bottom">
                         <div className="heading">
-                          <h6>최고 경매액</h6>
+                          <h6>
+                            {item?.type == 1 ? "최고 경매액" : "판매 가격"}
+                          </h6>
                           <div className="price">
                             <div className="icon">
                               <img
@@ -296,7 +321,9 @@ function ItemDetails(props) {
                               />
                             </div>
                             <span>
-                              {commarNumber(item?.max_price ?? 0)}{" "}
+                              {item?.type == 1
+                                ? commarNumber(item?.max_price ?? 0)
+                                : commarNumber(item?.price)}{" "}
                               {item?.wallet?.unit}
                             </span>
                           </div>
@@ -309,7 +336,7 @@ function ItemDetails(props) {
                             style={{ cursor: "pointer" }}
                             onClick={() => setModalShow(true)}
                           >
-                            입찰하기
+                            {item?.type==1?'입찰하기':'구매하기'}
                           </div>
                           {/* <div to="#" className="tf-button">
                             Save for later

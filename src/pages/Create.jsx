@@ -32,6 +32,10 @@ function Create(props) {
   const [wallets, setWallets] = useState([]);
   const [properties, setProperties] = useState([]);
   const [categories, setCategories] = useState([]);
+  const types = [
+    { val: 0, name: "일반판매" },
+    { val: 1, name: "경매판매" },
+  ];
   const defaultObj = {
     wallet: {},
     category_pk: undefined,
@@ -44,6 +48,7 @@ function Create(props) {
     note: "",
     end_date: "",
     property_list: [],
+    type: 0,
   };
   const [values, setValues] = useState(defaultObj);
   useEffect(() => {
@@ -77,16 +82,16 @@ function Create(props) {
     setCategories(response3?.data);
   };
   const onCreate = async () => {
-    if(
-      !values.wallet?.pk || 
+    if (
+      !values.wallet?.pk ||
       !values.category_pk ||
       !values.img.content ||
       !values.name ||
       !values.price ||
       !values.note ||
-      !values.end_date
-    ){
-      toast.error('필수값을 입력해 주세요.');
+      (values.type==1 && !values.end_date)
+    ) {
+      toast.error("필수값을 입력해 주세요.");
       return;
     }
     Swal.fire({
@@ -315,9 +320,46 @@ function Create(props) {
                             ))}
                         </ul>
                       </fieldset>
+                      <fieldset className="propertise">
+                        <label className="mb8">판매 타입 선택</label>
+                        <p className="sub">타입을 선택해 주세요. (단일 선택)</p>
+                        <ul
+                          className="propertise-list"
+                          style={{ display: "flex", flexWrap: "wrap" }}
+                        >
+                          {types &&
+                            types.map((item, idx) => (
+                              <>
+                                <li
+                                  onClick={() =>
+                                    setValues({
+                                      ...values,
+                                      ["type"]: item?.val,
+                                    })
+                                  }
+                                >
+                                  <Link
+                                    to="#"
+                                    style={{
+                                      background: `${
+                                        values.type == item?.val
+                                          ? theme.color.background1
+                                          : ""
+                                      }`,
+                                    }}
+                                  >
+                                    {item.name}
+                                  </Link>
+                                </li>
+                              </>
+                            ))}
+                        </ul>
+                      </fieldset>
                       <div className="set-item">
                         <fieldset>
-                          <label className="mb8">시작 입찰가</label>
+                          <label className="mb8">
+                            {values.type == 1 ? "시작 입찰가" : "상품 가격"}
+                          </label>
                           <input
                             type="text"
                             placeholder="숫자를 입력해 주세요."
@@ -333,24 +375,31 @@ function Create(props) {
                           <input type="text" placeholder="E.G. 0,01 Eth" />
                         </fieldset> */}
                       </div>
-                      <div className="set-item">
-                        <fieldset>
-                          <label className="mb8">경매 마감일</label>
-                          <input
-                            type="date"
-                            placeholder="숫자를 입력해 주세요."
-                            name="end_date"
-                            onChange={onChangeValues}
-                            value={values.end_date}
-                          />
-                        </fieldset>
-                        {/* <fieldset>
+                      {values.type == 1 ? (
+                        <>
+                          <div className="set-item">
+                            <fieldset>
+                              <label className="mb8">경매 마감일</label>
+                              <input
+                                type="date"
+                                placeholder="숫자를 입력해 주세요."
+                                name="end_date"
+                                onChange={onChangeValues}
+                                value={values.end_date}
+                              />
+                            </fieldset>
+                            {/* <fieldset>
                           <label className="mb8">
                             Select royalties amount, %
                           </label>
                           <input type="text" placeholder="E.G. 0,01 Eth" />
                         </fieldset> */}
-                      </div>
+                          </div>
+                        </>
+                      ) : (
+                        <></>
+                      )}
+
                       {/* <ul className="collection-list">
                         <li>
                           <div className="list">

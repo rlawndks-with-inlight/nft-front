@@ -25,6 +25,18 @@ const CardModal = (props) => {
       toast.error(response?.message);
     }
   };
+  const onBuy = async () => {
+    onHide();
+    const { data: response } = await axios.post("/api/buy", {
+      item_pk: item?.pk,
+    });
+    if (response?.result > 0) {
+      toast.success("성공적으로 구매 되었습니다.");
+      window.location.reload();
+    } else {
+      toast.error(response?.message);
+    }
+  };
   const onChangeValues = (event) => {
     let { name, value } = event.target;
     setValues({ ...values, [name]: value });
@@ -34,43 +46,64 @@ const CardModal = (props) => {
       <Modal.Header closeButton></Modal.Header>
 
       <div className="modal-body space-y-20 pd-40">
-        <h3>입찰하기</h3>
-        <p className="text-center sub-heading">
-          최소{" "}
-          <span className="price color-popup">
-            {commarNumber(item?.price)} {item?.wallet?.unit}
-          </span>
-          를 입찰해야 합니다.
-        </p>
-        <input
-          type="number"
-          className="form-control"
-          name="price"
-          placeholder={`00.00`}
-          onChange={onChangeValues}
-          value={values.price}
-        />
+        <h3>{item?.type == 1 ? "입찰하기" : "구매하기"}</h3>
+        {item?.type == 1 ? (
+          <>
+            <p className="text-center sub-heading">
+              최소{" "}
+              <span className="price color-popup">
+                {commarNumber(item?.price)} {item?.wallet?.unit}
+              </span>
+              를 입찰해야 합니다.
+            </p>
+            <input
+              type="number"
+              className="form-control"
+              name="price"
+              placeholder={`00.00`}
+              onChange={onChangeValues}
+              value={values.price}
+            />
+          </>
+        ) : (
+          <></>
+        )}
+
         <p className="label-1" />
         <div className="d-flex justify-content-between detail-1">
-          <p> 최소 입찰 가격:</p>
+          <p>{item?.type == 1 ? "최소 입찰 가격" : "상품 가격"}:</p>
           <p className="text-right price color-popup">
             {" "}
             {commarNumber(item?.price)} {item?.wallet?.unit}
           </p>
         </div>
-        <div className="d-flex justify-content-between detail-2">
-          <p> 현재 최고 입찰가:</p>
-          <p className="text-right price color-popup">
-            {commarNumber(item?.max_price??0)} {item?.wallet?.unit}{" "}
-          </p>
-        </div>
-        <div className="d-flex justify-content-between detail-3">
-          <p> 총 입찰 금액:</p>
-          <p className="text-right price color-popup">
-            {" "}
-            {commarNumber(values.price ?? 0)} {item?.wallet?.unit}{" "}
-          </p>
-        </div>
+        {item?.type == 1 ? (
+          <>
+            <div className="d-flex justify-content-between detail-2">
+              <p> 현재 최고 입찰가:</p>
+              <p className="text-right price color-popup">
+                {commarNumber(item?.max_price ?? 0)} {item?.wallet?.unit}{" "}
+              </p>
+            </div>
+            <div className="d-flex justify-content-between detail-3">
+              <p> 총 입찰 금액:</p>
+              <p className="text-right price color-popup">
+                {" "}
+                {commarNumber(values.price ?? 0)} {item?.wallet?.unit}{" "}
+              </p>
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="d-flex justify-content-between detail-3">
+              <p>잔액:</p>
+              <p className="text-right price color-popup">
+                {" "}
+                {commarNumber(0)} {item?.wallet?.unit}{" "}
+              </p>
+            </div>
+          </>
+        )}
         <div
           style={{ cursor: "pointer" }}
           className="button-popup"
@@ -78,10 +111,15 @@ const CardModal = (props) => {
           data-target="#popup_bid_success"
           data-dismiss="modal"
           aria-label="Close"
-          onClick={addAuction}
+          onClick={() => {
+            if (item?.type == 1) {
+              addAuction();
+            } else if (item?.type == 0) {
+              onBuy();
+            }
+          }}
         >
-          {" "}
-          입찰하기
+          {item?.type == 1 ? "입찰하기" : "구매하기"}
         </div>
       </div>
     </Modal>
